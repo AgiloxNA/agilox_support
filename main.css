@@ -91,3 +91,19 @@ code {
 b {
   color: #9c3;
 }
+#tools {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+}
+#toolspic {
+  width: 100%;
+  margin-left: 10%;
+  padding: 5px;
+  border-style: solid;
+  border-color: #9c3;
+  border-width: 3px;
+  border-radius: 3px;
+}
