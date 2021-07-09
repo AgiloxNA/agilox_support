@@ -46,6 +46,7 @@ body {
   display: flex;
   flex-direction: column;
   position: absolute;
+  max-width: 1000px;
   top: 0px;
   padding-top: 30px;
   margin-left: 25%;
