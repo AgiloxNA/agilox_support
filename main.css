@@ -101,16 +101,18 @@ b {
 #toolspic {
   width: 500px;
   margin-left: 10%;
-  filter: drop-shadow(4px 4px 5px #555);
+  filter: drop-shadow(4px 4px 5px #777);
 }
 .lidarpicsdiv {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 90%;
+  margin: auto;
 }
 .lidarpic {
-  width: 500px;
+  width: 400px;
+  max-width: 400px;
   height: 400px;
   object-fit: cover;
   margin: 5%;
