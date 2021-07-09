@@ -92,16 +92,20 @@ code {
 b {
   color: #9c3;
 }
-#tools {
+.twocolumn {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   margin: auto;
 }
-#toolspic {
+.twocolumnpic {
   width: 300px;
+  min-width: 300px;
+  height: 300px;
+  object-fit: cover;
   margin-left: 10%;
+  margin-top: 30px;
   filter: drop-shadow(4px 4px 5px #777);
 }
 .lidarpicsdiv {
@@ -124,4 +128,27 @@ b {
   object-fit: cover;
   margin: 20px;
   filter: drop-shadow(4px 4px 5px #777);
+}
+#lidarpic8 {
+  object-position: 15% 50%;
+}
+.powerpicsdiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+}
+.powerpic {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  margin: 30px;
+  filter: drop-shadow(4px 4px 5px #777);
+}
+#powerpic1 {
+  object-position: 50% 15%;
+}
+#powerpic2 {
+  object-position: 50% 95%;
 }
