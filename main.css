@@ -20,6 +20,9 @@ body {
   margin-top: 30px;
   width: 50%;
 }
+#nav-title {
+  margin-right: 100px;
+}
 .nav-link {
   color: #fff;
   text-decoration: none;
