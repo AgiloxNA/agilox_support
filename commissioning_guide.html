@@ -14,7 +14,7 @@
     <a href="#initial-setup" class="nav-link">Initial Setup</a>
     <a href="#lidar-installation" class="nav-link">LiDAR Installation</a>
     <a href="#powering-on" class="nav-link">Powering On</a>
-    <a href="#settings" class="nav-link">Settings</a>
+    <a href="#maintenance-mode" class="nav-link">Maintenance Mode</a>
     <div id="contact">
     Contact:<br>
       <span id="email">jacob.dunn@agilox.net<br>sonny.bucci@agilox.net</span>
@@ -131,26 +131,82 @@
         <img src="images/powerpic6.jpg" id="powerpic6" class="powerpic">
       </div>
     </section>
-    <section class="main-section" id="settings">
+    <section class="main-section" id="maintenance-mode">
       <header>
         <h1>
-          Settings
+          Maintenance Mode
         </h1>
       </header>
       <p>
-        Now that the OCF is fully assembled, make sure the mode selector is set to maintenance mode (the key should be turned to the left-most position) and power on the vehicle. Connect your device to the vehicle's hotspot and navigate to the HMI. <i>Note: If you are unfamiliar with this process, please refer to the Operation Manual for the AGILOX OCF or AGILOX ONE.</i>
+        Before an AGILOX unit can create or join a Union (group of units that share information with each other),  the WiFi network information must be loaded into the unit in maintenance mode. After powering on, the unit will take a minute or two to boot up. Once the boot process is complete, the Acknowledge button opposite from the power and mode switches will light up. Once the blue light is on, press the Acknowledge button. The Start button will light up shortly after that, and again, press the Start button once it is illuminated. Now the LED indicators along each side of the unit should be flashing yellow to indicate it is in maintenance mode.
+      </p>
+      <div class="maintpicsdiv">
+        <img src="images/maintpic1.jpg" id="maintpic1" class="maintpic">
+        <img src="images/maintpic2.jpg" id="maintpic2" class="maintpic">
+      </div>
+      <p>
+        You can now also see some information displayed by the LIDAR sensor on top: the unit's serial number and IP address. When in maintenance mode, every unit will create a WiFi hotspot which has the same name as the unit's serial number. The password for this hotspot is also the same as the name, the unit's serial number. Connect your laptop or other WiFi device to this new hotspot, and type in the serial number for the password. Once you have done this, open your web browser and type in the IP address shown in the bottom row of the LIDAR sensor's display in the address bar.
+      </p>
+      <div class="maintpicsdiv">
+        <img src="images/maintpic3.jpg" id="maintpic3" class="maintpic">
+      </div>
+      <p>
+        After navigating to the IP address shown by the unit, you should see a basic HMI screen. There is not much to see yet, and in order to make any changes you will have to log in by clicking the last button on the left. The default login for customers is <b>admin</b> and password also <b>admin</b>. Later you can change this password and add other user accounts with varying levels of access, but for now we will leave it as is.
+      </p>
+      <div class="maintpicsdiv">
+        <img src="images/maintpic4.jpg" id="maintpic4" class="maintpic">
+      </div>
+      <p>
+        After logging in, you can now see the full suite of HMI control groups on the left hand side. Some quick notes about the HMI: You can always click the AGILOX logo in the top left corner to return to this view. Also, everything that you do in the HMI is updated on the unit in real time. With few exceptions, there are no save or upload/download buttons, and almost all activities you can perform in the browser window become effective immediately.
+      </p>
+      <div class="maintpicsdiv">
+        <img src="images/maintpic5.jpg" id="maintpic5" class="maintpic">
+      </div>
+      <p>
+        Now, hold down both the Start and Acknowledge buttons at the same time until you hear a chime (about 6 seconds). After you hear the tone, you will see a new button on the HMI screen - a gear icon with an orange background.
+      </p>
+      <div class="maintpicsdiv">
+        <img src="images/maintpic6.jpg" id="maintpic6" class="maintpic">
+        <img src="images/maintpic7.jpg" id="maintpic7" class="maintpic">
+      </div>
+      <div class="twocolumn">
+        <div>
+          <h2>
+            Union Setup
+          </h2>
+          <p>
+            Click on the orange gear icon, and you will be prompted to enter the name of the Union you want to connect this unit to. This name can be anything you want for the first unit, but if there are already existing units that you want this one to collaborate with, the Union name must be exactly the same as the one used by the other units (case sensitive). When finished, press the check mark to continue.
+          </p>
+        </div>
+        <img src="images/maintpic8.jpg" id="maintpic8" class="twocolumnpic">
+      </div>
+      <div class="twocolumn">
+        <div>
+          <h2>
+            WiFi Setup
+          </h2>
+          <p>
+            Next, select the WiFi network you would like to connect this unit to. After selecting the network, enter the password you used to connect to that network.
+          </p>
+        </div>
+        <img src="images/maintpic9.jpg" id="maintpic9" class="twocolumnpic">
+      </div>
+      <div class="twocolumn">
+        <div>
+          <h2>
+            WiFi Setup
+          </h2>
+          <p>
+            After entering the WiFi information, you will be presented with the choice of a DHCP or Static IP address. For testing purposes, DHCP is the quickest way to get going, but a static IP is preferred for long term operation. Another option is to create DHCP reservations for each unit, if you prefer to leave them in DHCP mode. In either case, your IT department must modify the WiFi network configuration to ensure that each unit has a permanent IP address which will not change. Leaving the units in either mode without appropriately configuring the network can eventually lead to network dropouts, IP address conflicts, and other unpredictable behavior. 
+          </p>
+        </div>
+        <img src="images/maintpic10.jpg" id="maintpic10" class="twocolumnpic">
+      </div>
+      <p>
+        That's it! If this unit is joining an existing Union, you can flip the key switch over to Automatic mode, press the Start button, and in a few moments the unit will download the map and work order information from the other units and begin working right away.
       </p>
       <p>
-        There are a few settings that must be applied in order for the OCF to begin working autonomously:
-      </p>
-      <ol>
-        <li>First, you can go ahead and perform the preliminary setup (connecting the OCF to an existing union, WiFi, etc.), please refer to the Operation Manual if you need help with these steps.</li>
-        <li>The weight of the forks must be calibrated. By default, the weight of the forks themselves is being measured by the vehicle and the load weight will be reading 30-40kg, this will trigger an occupation error and prevent the OCF from driving in automatic mode.</li>
-        <li>The zero position of the forks must be set. This process as well as the process for calibrating the weight of the forks is detailed in section 3.2 of the Administrator Manual. Once both these processes are complete, you can turn the mode selector to manual mode and perform the final task while connected to the vehicle over WiFi.</li>
-        <li>The lowered fork height must be set above the height of the rear SICK safety sensor, otherwise the forks will trigger the protective field. The object <code>"lift": { "lowered": 200, "default": 250 }</code> can be placed in the "localconfig" collection in the system database editor if the OCF is part of a union with AGILOX ONE units and you don't want to alter the lowered lift value of the entire union. The values of "200" and "250" can be adjusted, as long as the forks are not within the protective field.</li>
-      </ol>
-      <p>
-        Once all these tasks are complete, the OCF should be ready to receive orders and begin working autonomously.
+        If this is the very first unit being set up, continue to the next section for more information on operating the unit in Manual mode, which we will need later to create the map.
       </p>
     </section>
   </main>
