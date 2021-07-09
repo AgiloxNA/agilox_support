@@ -21,7 +21,7 @@ body {
   width: 50%;
 }
 #nav-title {
-  margin-right: 100px;
+  margin-right: 75px;
 }
 .nav-link {
   color: #fff;
@@ -29,7 +29,7 @@ body {
   text-transform: uppercase;
   margin-top: 10px;
   margin-bottom: 10px;
-  margin-right: 100px;
+  margin-right: 75px;
   padding-bottom: 15px;
   border-bottom: solid 1px
 }
@@ -49,15 +49,15 @@ body {
   display: flex;
   flex-direction: column;
   position: absolute;
-  max-width: 1000px;
+  max-width: 1200px;
   top: 0px;
   padding-top: 30px;
   margin-left: 25%;
   margin-right: 0px;
   color: #444;
   background: white;
-  padding-left: 150px;
-  padding-right: 150px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 .main-section {
   padding-bottom: 50px;
