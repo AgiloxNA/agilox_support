@@ -105,15 +105,15 @@ b {
 }
 .lidarpicsdiv {
   display: flex;
-  align-items: center;
   justify-content: center;
-  width: 90%;
-  margin: auto;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
 }
 .lidarpic {
-  width: 40%;
-  height: 400px;
+  width: 300px;
+  height: 300px;
   object-fit: cover;
-  margin: 5%;
-  filter: drop-shadow(4px 4px 5px #555);
+  margin: 30px;
+  filter: drop-shadow(4px 4px 5px #777);
 }
