@@ -126,7 +126,7 @@ b {
   width: 200px;
   height: 200px;
   object-fit: cover;
-  margin: 20px;
+  margin: 10px;
   filter: drop-shadow(4px 4px 5px #777);
 }
 #lidarpic8 {
@@ -144,6 +144,16 @@ b {
   height: 300px;
   object-fit: cover;
   margin: 30px;
+  filter: drop-shadow(4px 4px 5px #777);
+}
+.powerpicsmall {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin-top: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 50px;
   filter: drop-shadow(4px 4px 5px #777);
 }
 #powerpic1 {
