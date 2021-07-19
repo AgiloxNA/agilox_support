@@ -237,7 +237,7 @@
         </div>
         <img src="images/manualpic2.jpg" id="manualpic2" class="twocolumnpic">
       </div>
-      <p style="margin-top: 100px;">
+      <p class="paragraph-break">
         The primary use for Manual Mode is the "Manual Drive" function, which can be found by clicking the second button from the top on the left side of the HMI screen.
       </p>
       <img src="images/manualpic3.jpg" id="manualpic3" class="fullsizepic">
@@ -281,7 +281,50 @@
       <p>
         Before we begin to create the map, use Manual Mode to drive the unit into the intended operating area. It should be parked initially in an area with a clear view of fixed reference points, such as a wall and other structural features of the building which are unobstructed by crates or other materials, and ideally beginning about 20-30 feet away from and facing the center of one of the walls. Below is an example of the driving procedure for the teaching function. It's best to drive in a roughly star-like or saw-tooth pattern as shown, rather than driving in circles along the walls:
       </p>
-      <img src="">
+      <img src="images/teachpic1.jpg" id="teachpic1" class="fullsizepic">
+      <p>
+        The area shown here is relatively small, and in fact a room this size may be adequately mapped with a single scan, which may not require any driving at all. Note the pattern shown in this example is for illustration purposes and not necessarily to scale. 
+      </p>
+      <div class="twocolumn">
+        <div>
+          <p>
+            One last thing before you begin: in order to see what you're doing, you will need to enable some visibility options in the HMI. Go the second button up from the bottom on the left hand side (Visualization Toggles) and select "Show scan data in visualization" and "Show map in visualization" (the two highlighted in green here).
+          </p>
+          <p>
+            The scan data option will show you dark and light blue lines, which represent the vision of the floor-level safety scanners, as well as green lines, which show data from the navigation scanner on top. The show map option will show black lines which represent the reference points that have been taught as part of the map. There will not be any black lines just yet, since we have to create them!
+          </p>
+        </div>
+        <img src="images/teachpic2.jpg" id="teachpic2" class="twocolumnpic">
+      </div>
+      <p class="paragraph-break">
+        Now as in the last section, go to the Manual Drive page, and click on the button next to #3 to add a new contour from the navigation scanner.
+      </p>
+      <img src="images/teachpic3.jpg" id="teachpic3" class="fullsizepic">
+      <div class="twocolumn">
+        <div>
+          <p>
+            In the window that pops up, first select "Rectangular Snap" and then click Enable AutoTeach.
+          </p>
+        </div>
+        <img src="images/teachpic4.jpg" id="teachpic4" class="twocolumnpic">
+      </div>
+      <p class="paragraph-break">
+        Now the unit will begin scanning the environment. There are audio-visual cues to let you know that scanning is in progress and when it is done. Begin driving the unit in the mapping pattern shown above. When the navigation match drops below a certain level, it will automatically stop and perform another scan. It's also a good idea to keep an eye on the map as it is being built, so that you can ensure the dimensions of the defined map area can accommodate the scan data - it is helpful here to have your laptop on the map view and use your phone for manual driving. Go to the misc. tools and settings tab in the HMI and click the map settings button, so that a window that looks like this comes up:
+      </p>
+      <img src="images/teachpic5.jpg" id="teachpic5" class="fullsizepic">
+      <p>
+        You will have to experiment with the dimensions and offsets to fit the map area into the window the way you want. Note that all of the information that AGILOX captures about the environment is always stored in the map, even if you can't see it. If you start driving and auto-teaching outside of the defined map area, or if you shrink or shift the map in such a way that a previously visible portion disappears, the information will not be lost. You can simply adjust the map until it is visible again - however, anything outside of the defined map area cannot be used for navigation purposes, so the auto-teach process will be faster and more accurate if you keep adjusting the map to contain everything within the visible area.
+      </p>
+      <p class="paragraph-break">
+        When finished mapping: from your computer, go back to the main menu by clicking the AGILOX logo in the top left if you are not already there. For the next step, we need to download the map file that we have created, by clicking the download button on the right hand side. But first, a little cleanup may be necessary.
+      </p>
+      <p>
+        When the "show map" visualization is enabled, you can also see all of the scan points here on the right hand side. You can toggle the visibility of or delete specific map teaching increments here, and by hovering your mouse over the numbers you will see which segments are included in that iteration highlighted in red.
+      </p>
+      <p>
+        Finally, the last button under the visualization toggles tab, "Erase map areas," will allow you delete specific portions of the map. This is useful for removing small sections of erroneous information from the map, such as scan points picked up by people's heads, crates, forklifts, or other temporary obstacles that you don't want to be a part of the permanent map data.
+      </p>
+      <img src="images/teachpic6.jpg" id="teachpic6" class="fullsizepic">
     </section>
   </main>
 </body>

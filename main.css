@@ -95,6 +95,9 @@ code {
 b {
   color: #9c3;
 }
+.paragraph-break {
+  margin-top: 100px;
+}
 .twocolumn {
   display: flex;
   justify-content: space-between;
@@ -192,12 +195,11 @@ b {
   object-position: 0% 50%;
 }
 .fullsizepic {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: block;
   width: 1000px;
   height: auto;
-  margin: 50px;
+  margin: 50px auto;
+  filter: drop-shadow(4px 4px 5px #777);
 }
 .main-link {
   color: #444F60;
@@ -205,4 +207,10 @@ b {
 }
 .main-link:hover {
   color: #9c3;
+}
+#teachpic1 {
+  width: 500px;
+}
+#teachpic4 {
+  object-fit: contain;
 }
