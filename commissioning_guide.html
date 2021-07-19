@@ -15,6 +15,9 @@
     <a href="#lidar-installation" class="nav-link">LiDAR Installation</a>
     <a href="#powering-on" class="nav-link">Powering On</a>
     <a href="#maintenance-mode" class="nav-link">Maintenance Mode</a>
+    <a href="#manual-mode" class="nav-link">Manual Mode</a>
+    <a href="#creating-the-map" class="nav-link">Creating the Map</a>
+    <a href="#auto-teach-function" class="nav-link">Auto-Teach Function</a>
     <div id="contact">
     Contact:<br>
       <span id="email">jacob.dunn@agilox.net<br>sonny.bucci@agilox.net</span>
@@ -208,6 +211,77 @@
       <p>
         If this is the very first unit being set up, continue to the next section for more information on operating the unit in Manual mode, which we will need later to create the map.
       </p>
+    </section>
+    <section class="main-section" id="manual-mode">
+      <header>
+        <h1>
+          Manual Mode
+        </h1>
+      </header>
+      <div class="twocolumn">
+        <div>
+          <p>
+            Now that the initial setup is complete, we can begin operating the unit in Manual mode. To start, turn the key switch to the Manual mode position in the center ( || symbol ). The start button will illuminate, and in order to confirm the mode change you must press the start button. When ready, the LED indicators on the side of the unit will be flashing blue to indicate Manual Mode.
+          </p>
+        </div>
+        <img src="images/manualpic1.jpg" id="manualpic1" class="twocolumnpic">
+      </div>
+      <div class="twocolumn">
+        <div>
+          <p>
+            After switching to Manual mode, the hotspot that you were connected to while the unit was in Maintenance mode will be switched off. The unit will now be connected to the WiFi network that you configured in the last step, which means that you can no longer use the HMI from the same IP address as before. First connect your device to the same WiFi network you configured in the previous section. Then press and release the Start button 3 times as shown in the animation to the right.
+          </p>
+          <p>
+            The unit will again show its serial number and IP address on the LIDAR sensor at the top of the unit, but now the IP address should be different than the one you saw in Maintenance Mode. As you did in the previous section, type this IP address into your browser and log in to the admin account.
+          </p>
+        </div>
+        <img src="images/manualpic2.jpg" id="manualpic2" class="twocolumnpic">
+      </div>
+      <p style="margin-top: 100px;">
+        The primary use for Manual Mode is the "Manual Drive" function, which can be found by clicking the second button from the top on the left side of the HMI screen.
+      </p>
+      <img src="images/manualpic3.jpg" id="manualpic3" class="fullsizepic">
+      <p>
+        This screen allows you to drive the unit manually in any direction. Click or tap and hold the white dot in the center, then drag in the direction you would like to move, as shown. When you let go, the unit will stop immediately. Keep in mind that, while all of the safety fields are active in Manual Mode, it may be possible to manually drive the unit into a position it can't get out of. If this happens, you can also use this screen in Maintenance Mode to drive with the safety fields deactivated. However, manual driving in maintenance mode also requires that you hold down the acknowledge (blue) button on the unit to enable the driving controls. There is no safety active when driving in maintenance mode, so the acknowledge button acts as a "dead man switch."
+      </p>
+      <p>
+        The other items at the corners of this screen enable some additional functionality:
+      </p>
+      <ol>
+        <li>Enables raising/lowering the lift system. Note that lowering the forks requires a very wide safety field: if the forks will not go down, try driving to a more open area first.</li>
+        <li>Enables parallel driving in any direction, without turning.</li>
+        <li>Activates the teaching function, used to create the map.</li>
+        <li>Allows station entering. In order to manually pick up a pallet or parallel drive through a very narrow aisle, this option must be selected. But, watch your feet with this option selected, as it disables a portion of the safety field near the fork tips.</li>
+      </ol>
+      <p>
+        In the next section, we will be creating map the using the button next to number #3.
+      </p>
+    </section>
+    <section class="main-section" id="creating-the-map">
+      <header>
+        <h1>
+          Creating the Map
+        </h1>
+      </header>
+      <p>
+        Items required for this section:
+      </p>
+      <ul>
+        <li>WiFi-enabled laptop (smartphone may also be used for driving)</li>
+        <li>The free and open source drawing program Inkscape: <a href="https://inkscape.org/release/inkscape-1.0/" class="main-link">click here to download</a></li>
+        <li>At least one active AGILOX vehicle that has been through the <a href="#initial-setup" class="main-link">Initial Setup</a> process</li>
+      </ul>
+    </section>
+    <section class="main-section" id="auto-teach-function">
+      <header>
+        <h1>
+          Auto-Teach Function
+        </h1>
+      </header>
+      <p>
+        Before we begin to create the map, use Manual Mode to drive the unit into the intended operating area. It should be parked initially in an area with a clear view of fixed reference points, such as a wall and other structural features of the building which are unobstructed by crates or other materials, and ideally beginning about 20-30 feet away from and facing the center of one of the walls. Below is an example of the driving procedure for the teaching function. It's best to drive in a roughly star-like or saw-tooth pattern as shown, rather than driving in circles along the walls:
+      </p>
+      <img src="">
     </section>
   </main>
 </body>

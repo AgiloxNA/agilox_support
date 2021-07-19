@@ -188,3 +188,21 @@ b {
 #maintpic10 {
   object-fit: contain;
 }
+#manualpic3 {
+  object-position: 0% 50%;
+}
+.fullsizepic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1000px;
+  height: auto;
+  margin: 50px;
+}
+.main-link {
+  color: #444F60;
+  text-decoration: underline;
+}
+.main-link:hover {
+  color: #9c3;
+}
