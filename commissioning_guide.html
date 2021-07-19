@@ -18,6 +18,7 @@
     <a href="#manual-mode" class="nav-link">Manual Mode</a>
     <a href="#creating-the-map" class="nav-link">Creating the Map</a>
     <a href="#auto-teach-function" class="nav-link">Auto-Teach Function</a>
+    <a href="#inkscape-configuration" class="nav-link">Inkscape Configuration</a>
     <div id="contact">
     Contact:<br>
       <span id="email">jacob.dunn@agilox.net<br>sonny.bucci@agilox.net</span>
@@ -324,7 +325,54 @@
       <p>
         Finally, the last button under the visualization toggles tab, "Erase map areas," will allow you delete specific portions of the map. This is useful for removing small sections of erroneous information from the map, such as scan points picked up by people's heads, crates, forklifts, or other temporary obstacles that you don't want to be a part of the permanent map data.
       </p>
+      <p>
+        When cleanup is finished and the map is properly sized and rotated, download the map file.
+      </p>
       <img src="images/teachpic6.jpg" id="teachpic6" class="fullsizepic">
+    </section>
+    <section class="main-section" id="inkspace-configuration">
+      <header>
+        <h1>
+          Inkscape Configuration
+        </h1>
+      </header>
+      <p>
+        To facilitate the processing of AGILOX maps, some menu windows (1) and the color palette from the documentation (2) are required.
+      </p>
+      <div class="twocolumn">
+        <div>
+          <h2>
+            Settings Menu
+          </h2>
+          <p>
+            The settings of the menus and windows are saved in the file <code>preferences.xml</code> (file can be downloaded below). This file must be copied into the directory for the local Inkscape settings. This directory is usually located under <code>C:\Users\<User>\AppData \Roaming\inkscape</code>
+          </p>
+          <h2>
+            Color Palette
+          </h2>
+          <p>
+            The color palette for the AGILOX standard map colors is saved in the file agilox.gpl (file can be downloaded below). This file is to be copied into the directory for the local customer-specific color palettes from Inkscape. This directory is usually located at <code>C:\Users\<User>\AppData \Roaming\inkscape\palettes</code>
+          </p>
+          <p>
+            <b>After both files have been copied, please restart Inkscape.</b>
+          </p>
+        </div>
+        <img src="images/inkpic1.jpg" id="inkpic1" class="twocolumnpic-bigger">
+      </div>
+      <div class="twocolumn">
+        <div>
+          <h2>
+            Note
+          </h2>
+          <p>
+            If the AGILOX color palette is not automatically displayed after the restart, then it must be selected manually.
+            </p>
+          <p>
+            By clicking on the arrow on the right edge of the color palette (1), a menu for selecting the color palette <b>AGILOX</b> (2) appears.
+          </p>
+        </div>
+        <img src="images/inkpic2.jpg" id="inkpic2" class="twocolumnpic-bigger">
+      </div>
     </section>
   </main>
 </body>
