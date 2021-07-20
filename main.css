@@ -107,6 +107,7 @@ b {
 }
 .twocolumnpic {
   width: 300px;
+  min-width: 300px;
   height: 300px;
   object-fit: cover;
   margin-left: 10%;
@@ -121,52 +122,37 @@ b {
   margin-top: 30px;
   filter: drop-shadow(4px 4px 5px #777);
 }
-.lidarpicsdiv {
+.squarepicsdiv {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   margin: 0 auto;
 }
-.lidarpic {
+.squarepic {
   width: 300px;
   height: 300px;
   object-fit: cover;
   margin: 30px;
   filter: drop-shadow(4px 4px 5px #777);
 }
-.lidarpicsmall {
+.threepicsmall {
   width: 200px;
   height: 200px;
   object-fit: cover;
   margin: 10px;
+  margin-top: 50px;
+  margin-bottom: 50px;
   filter: drop-shadow(4px 4px 5px #777);
 }
 #lidarpic8 {
   object-position: 15% 50%;
 }
-.powerpicsdiv {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin: 0 auto;
-}
-.powerpic {
+.squarepic {
   width: 300px;
   height: 300px;
   object-fit: cover;
   margin: 30px;
-  filter: drop-shadow(4px 4px 5px #777);
-}
-.powerpicsmall {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  margin-top: 50px;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-bottom: 50px;
   filter: drop-shadow(4px 4px 5px #777);
 }
 #powerpic1 {
@@ -174,20 +160,6 @@ b {
 }
 #powerpic2 {
   object-position: 50% 95%;
-}
-.maintpicsdiv {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin: 0 auto;
-}
-.maintpic {
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
-  margin: 30px;
-  filter: drop-shadow(4px 4px 5px #777);
 }
 #maintpic4 {
   object-position: 0% 50%;
