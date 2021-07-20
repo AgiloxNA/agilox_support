@@ -20,6 +20,7 @@
     <a href="#auto-teach-function" class="nav-link">Auto-Teach Function</a>
     <a href="#inkscape-configuration" class="nav-link">Inkscape Configuration</a>
     <a href="#drawing-with-inkscape" class="nav-link">Drawing with Inkscape</a>
+    <a href="#basic-hmi-features" class="nav-link">Basic HMI Features</a>
     <div id="contact">
     Contact:<br>
       <span id="email">jacob.dunn@agilox.net<br>sonny.bucci@agilox.net</span>
@@ -406,7 +407,7 @@
       <div class="twocolumn">
         <div>
           <p>
-            If you need to resize the shape, click on the select tool (mouse pointer) just above the rectangle tool, or press S. Press ESC when you are done to clear the selection. Next we will define the room, i.e. the walls and other permanent features of the building, by covering ALL of the walls with another blocked rectangle using the room color.
+            If you need to resize the shape, click on the select tool (mouse pointer) just above the rectangle tool, or press S. <b>Press ESC when you are done to clear the selection</b>. Next we will define the room, i.e. the walls and other permanent features of the building, by covering ALL of the walls with another blocked rectangle using the room color.
           </p>
         </div>
         <img src="images/drawpic4.jpg" id="drawpic4" class="twocolumnpic">
@@ -414,7 +415,7 @@
       <div class="twocolumn">
         <div>
           <p>
-            Now we can begin cutting out the sections that don't belong to the room or blocked areas. Draw another rectangle (we will call this the "top" object) over an area that you want to delete , then choose the select tool or press S, so that you see black arrows around the object like this...
+            Now we can begin cutting out the sections that don't belong to the room or blocked areas. Draw another rectangle (we will call this the "<b>top</b>" object) over an area that you want to delete , then choose the select tool or press S, so that you see black arrows around the object like this...
           </p>
         </div>
         <img src="images/drawpic5.jpg" id="drawpic5" class="twocolumnpic">
@@ -422,7 +423,7 @@
       <div class="twocolumn">
         <div>
           <p>
-            ...Then, hold down SHIFT and left click on the area you want to cut from, in this case the bigger dark grey "room" rectangle (we will call this the "bottom" object).
+            ...Then, hold down SHIFT and left click on the area you want to cut from, in this case the bigger dark grey "room" rectangle (we will call this the "<b>bottom</b>" object).
           </p>
         </div>
         <img src="images/drawpic6.jpg" id="drawpic6" class="twocolumnpic">
@@ -460,6 +461,74 @@
       </p>
       <img src="images/drawpic13.jpg" id="drawpic13" class="fullsizepic">
       <img src="images/drawpic14.jpg" id="drawpic14" class="fullsizepic">
+    </section>
+    <section class="main-section" id="basic-hmi-features">
+      <header>
+        <h1>
+          Basic HMI Features
+        </h1>
+      </header>
+      <p>
+        With the map uploaded, there are some additional features to be aware of before we get into creating stations and workflows. When interacting with the map in the HMI, you can right click anywhere (or tap and hold on a touch-screen device) to bring up the Action menu, which will always give you a few actions to perform:
+      </p>
+      <ul>
+        <li><b>Drive to Target:</b> Only used in automatic mode, sends the unit to the desired position automatically.</li>
+        <li><b>New Station:</b> Used to create new stations, as well as waypoints and IO links. If you right click in between the forks of an AGILOX vehicle before choosing this option, the new station will be created in the same position and orientation as the vehicle.</li>
+        <li><b>New StationArea:</b> Creates a new group name to be used by stations which are all to be considered as a single origin/destination point. For example, when you want to bring one of many identical pallets to a general area of the map, but you don't care which exact station it ends up in.</li>
+        <li><b>Multiple Stations Select:</b> Allows you to modify certain properties of or delete multiple stations simultaneously</li>
+        <li><b>Force Local Positioning:</b> If the unit appears to be somewhere else on the map, i.e. the HMI shows a different position than the actual location, this is used to force the vehicle position to the location which you right clicked, then the unit will try to figure out the correct position again.</li>
+      </ul>
+      <p>
+        And, if you are right-clicking on a station or action area, there will be some other options in addition to, or instead of, the options mention above:
+      </p>
+      <ul>
+        <li><b>Modify Station: or Modify SVG Element:</b> Opens the properties menu for the selected object, which can also be accessed by double-clicking the station or object instead of going through the right-click action menu.</li>
+        <li><b>Drive to Station (only available when right-clicking on stations):</b> Automatically sends the unit to park in the designated station. Only used in Automatic Mode.</li>
+      </ul>
+      <p>
+        You can move stations with the mouse in 50 mm increments after they have been created by holding the SHIFT key, then click and drag the station to move. Similarly, you can also copy stations using the CTRL key. Copied stations inherit all the properties of the parent station, including the name (numbers will be appended at the end automatically to ensure a unique name), station area, allowed load carriers, preposition, etc.
+      </p>
+      <p class="paragraph-break">
+        Now let's take a look at the action area we created in Inkscape. Double-click on the action area,  or right-click and then choose "Modify SVG Element" with the wrench icon. When using the right-click menu you can also now see the action area you selected outlined with a dashed line:
+      </p>
+      <img src="images/basicpic1.jpg" id="basicpic1" class="fullsizepic">
+      <div class="twocolumn">
+        <div>
+          <p>
+            From the properties dialog, the first things you will be able to change are the name of the area and the visibility conditions in the general tab. All of the possible conditions are covered in the Commissioning Manual in section 4.7.5, and with these conditional statements you can choose whether or not the action area will be displayed in the HMI. On the left-hand side are some additional tabs for Flags (Commissioning Manual section 4.5.4.1), Actions (section 4.7.6), and Direction - limiting driving to one-way or only certain directions.
+          </p>
+        </div>
+        <img src="images/basicpic2.jpg" id="basicpic2" class="twocolumnpic">
+      </div>
+      <div class="twocolumn">
+        <div>
+          <p>
+            Next, notice that you have a tool-tip that appears when you hold the mouse over different areas:
+          </p>
+        </div>
+        <img src="images/basicpic3.jpg" id="basicpic3" class="twocolumnpic-bigger">
+      </div>
+      <p class="paragraph-break">
+        You can use this in conjunction with some additional visualization settings to understand how the path planning and driving dynamics work. In the visualization toggles tab, click on "Show route map in visualization". Here you can see the areas which AGILOX can use to plan routes using a cost-based system. Driving is prohibited in red areas (except when entering a station), and in orange areas driving is allowed, but not rotation - you can also see all of this information in the tool-tips that appear for each area. This will be an important tool in the next section, because stations generally must have their pre-position somewhere in the white space in this view. It can also be useful in the event that AGILOX refuses to drive through a narrow aisle, even though it looks like there should be enough space: if there is not a white-space path to the target, it won't be possible to get there in Automatic mode, so you will have to go back to Inkscape and make corrections to the map.
+      </p>
+      <img src="images/basicpic4.jpg" id="basicpic4" class="fullsizepic">
+      <p>
+        Another useful feature is the Heatmap section, the very last button on the HMI in the bottom left:
+      </p>
+      <img src="images/basicpic5.jpg" id="basicpic5" class="fullsizepic">
+      <p>
+        Here you have the option to select various heatmaps, including WiFi and 4G reception, position, speed, map quality, etc. If you start having issues later on in the setup process, these can help you understand why.
+      </p>
+      <p class="paragraph-break">
+        And finally, be sure to create regular backups of the software state. Now would be a good time to make the first one, and in the future, make a backup before you start making any changes to the system. Go to the Misc. tools and settings tab and click on "System settings":
+      </p>
+      <div class="squarepicsdiv">
+        <img src="images/basicpic6.jpg" id="basicpic6" class="rectanglepic">
+        <img src="images/basicpic7.jpg" id="basicpic7" class="rectanglepic">
+      </div>
+      <p>
+        When you click on the Backup / Restore button, you will be presented with the popup window above on the right. The Data option essentially saves everything about the system that you can change: the map, workflow information, wifi configuration, and any other custom attributes. Software is everything internal to the AGILOX platform: the installed software version, motion controls, IPC state, etc. Keep regular backups of both, and if you ever need to restore one of these files, the upload button is also here.
+      </p>
     </section>
   </main>
 </body>

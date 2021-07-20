@@ -96,7 +96,7 @@ b {
   color: #9c3;
 }
 .paragraph-break {
-  margin-top: 100px;
+  margin-top: 80px;
 }
 .twocolumn {
   display: flex;
@@ -110,7 +110,7 @@ b {
   min-width: 300px;
   height: 300px;
   object-fit: cover;
-  margin-left: 10%;
+  margin-left: 9%;
   margin-top: 30px;
   filter: drop-shadow(4px 4px 5px #777);
 }
@@ -118,7 +118,7 @@ b {
   width: 600px;
   height: auto;
   object-fit: cover;
-  margin-left: 10%;
+  margin-left: 8%;
   margin-top: 30px;
   filter: drop-shadow(4px 4px 5px #777);
 }
@@ -133,6 +133,13 @@ b {
   width: 300px;
   height: 300px;
   object-fit: cover;
+  margin: 30px;
+  filter: drop-shadow(4px 4px 5px #777);
+}
+.rectanglepic {
+  width: 375px;
+  height: 300px;
+  object-fit: fill;
   margin: 30px;
   filter: drop-shadow(4px 4px 5px #777);
 }
@@ -191,5 +198,8 @@ b {
   width: 500px;
 }
 #teachpic4 {
+  object-fit: contain;
+}
+#basicpic2, #basicpic3 {
   object-fit: contain;
 }
