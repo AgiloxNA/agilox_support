@@ -16,6 +16,12 @@ body {
   background: #444F60;
   padding-left: 35px;
 }
+#nav-links {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  margin-bottom: 10%;
+}
 #logo {
   margin-top: 30px;
   width: 50%;
