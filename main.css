@@ -175,7 +175,7 @@ b {
 }
 .fullsizepic {
   display: block;
-  width: 1000px;
+  width: 750px;
   height: auto;
   margin: 50px auto;
   filter: drop-shadow(4px 4px 5px #777);
