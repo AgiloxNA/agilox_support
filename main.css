@@ -39,6 +39,15 @@ body {
   padding-bottom: 15px;
   border-bottom: solid 1px
 }
+.back-link {
+  color: #9c3;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+.back-link:hover {
+  color: #fff;
+}
 .nav-link:hover {
   color: #9c3;
   border-color: white;

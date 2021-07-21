@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="main.css">
+  </head> 
+<body>
+    <nav id="navbar">
+        <header>
+          <a href="index.html"><img src="images/agilox-white.svg" id="logo"></a>
+          <h1 id="nav-title">
+            Stations and Workflows
+          </h1>
+        </header>
+        <div id="nav-links">
+            <a href="#station-settings" class="nav-link">Station Settings</a>
+            <a href="#create-charging-station" class="nav-link">Create a Charging Station</a>
+            <a href="#simple-workflow-example" class="nav-link">Simple Workflow Example</a>
+            <a href="#advanced-workflow-topics" class="nav-link">Advanced Workflow Topics</a>
+            <a href="commissioning_guide.html" class="back-link">Go Back</a>
+        </div>
+        <div id="contact">
+        Contact:<br>
+          <span id="email">jacob.dunn@agilox.net<br>sonny.bucci@agilox.net</span>
+        </div>
+      </nav>
+
+      <main id="main-doc">
+        <section class="main-section" id="stations-and-workflows">
+            <header>
+              <h1>
+                Stations and Workflows
+              </h1>
+            </header>
+            <p>
+              Items required for this section:
+            </p>
+            <div class="twocolumn">
+              <ul>
+                  <li>WiFi-enabled laptop</li>
+                  <li>At least one active AGILOX vehicle that has been through the Initial Setup process, and has a map file from Inkscape uploaded as described in the previous section</li>
+                  <li>An installed charger</li>
+                  <li>A euro pallet, cart, or other carrier for testing which has a base that measures 800 x 1200 mm or less</li>
+              </ul>
+              <img src="images/stationpic1.jpg" class="twocolumnpic-bigger">
+            </div>
+          </section>
+          <section class="main-section" id="station-settings">
+            <header>
+              <h1>
+                Station Settings
+              </h1>
+            </header>
+            <p>
+              Now that we've gone over the map and some basic controls and context menus, let's take a deeper look at creating usable stations. When you double click on a station, or right click and select "Modify Station," you will be presented with the menu shown below.
+            </p>
+            <p>
+              The station parameters are open by default, and on the left hand side menu bar (red box) you can find several other menus.
+            </p>
+            <ol>
+              <li><b>Station Parameters (current view):</b> allows you to modify the position, orientation, and driving approach to the station.</li>
+              <li><b>Station Options:</b> allows you to set various characteristics of a station, such as whether idle parking is allowed, whether the station can be used for charging, etc.</li>
+              <li><b>Load Carrier Settings:</b> here you can select which types of load carriers are valid for this station. You can add custom load carriers to this list in System Settings.</li>
+              <li><b>Station Area:</b> defines which station areas this station belongs to. Stations can be a member of multiple areas, and new areas are defined by right-clicking in the map view.</li>
+              <li><b>Admin Settings:</b> set custom conditions for station availability and occupation. See section 4.3.2.1 in the Commissioning Manual for full details.</li>
+              <li><b>Safety Settings:</b> here you can toggle the Safe Drop(+) features, which extend the use of the safety field during a load drop. See section 6.4.5 in the Operation Manual.</li>
+            </ol>
+            <img src="images/stationsetpic1.jpg" id="stationsetpic1" class="fullsizepic">
+            <p>
+              Since the Station Parameters (green box) are the most frequently adjusted settings, take a few minutes to familiarize yourself with what each of these settings does.
+            </p>
+            <ol>
+              <li><b>Station name:</b> fairly straightforward, this name is what you will use to address this station in workflows. Every station must have a unique name and is case sensitive.</li>
+              <li><b>Position X:</b> X-coordinate of the center of the station in the map.</li>
+              <li><b>Position Y:</b> Y-coordinate of the center of the station in the map.</li>
+              <li><b>Position Angle:</b> sets the station orientation. 0 degrees means the front of the station is facing "up" on the map, negative numbers rotate clockwise and positive numbers rotate counter-clockwise. AGILOX uses only +/- 180 degrees, but you can enter any number up to 360 degrees and the conversion will be performed automatically (i.e. 270 degrees will convert to -90 degrees). Anything beyond 360 will be treated as that number divided by 100, for example, entering 1234 gives 12.34 degrees.</li>
+              <li><b>Sort Order:</b> sets the priority for stations in a station area, if you want the stations to be dealt with in a certain order rather than randomly.</li>
+              <li><b>Entering Lift Height:</b> raises the forks by this amount before entering the station.</li>
+              <li><b>Relative Lift Height:</b> once a station is entered and ready for pickup, raises the forks this additional distance from the current position. Note that when leaving a station, the lift height will then be entering lift height + relative lift height, and the final lift height should be at least 150mm in order to clear the load from the view of the safety sensors.</li>
+              <li><b>Pre-position:</b> AGILOX is approaching this point and aligning itself with the station here before entering.</li>
+              <li><b>Prepre-position waypoint:</b> A prepre-position will sometimes be calculated automatically, if the pre-position is not in a drive-able area of the map (more on this below). You can also manually specify this point by creating a Waypoint on the map. AGILOX will drive to this point, align itself with the station, and then parallel-drive in whatever direction is necessary to reach the pre-position. This is used for "very narrow aisle" operations, or in any other situation when parallel driving is required to reach the station.</li>
+              <li><b>VIA Waypoint:</b> Similar to #9, this is a Waypoint that AGILOX will drive through before driving normally to the prepre-position, or if none is specified, the pre-position.</li>
+            </ol>
+            <p>
+              As mentioned in #9, an important consideration for station placement is the "allowed" driving area on the map. A station can still be placed inside no-driving areas, provided that there is a clear path to an allowed driving area. As shown in the example below, a prepre-position waypoint is automatically created when the pre-position is in a no-driving area.
+            </p>
+            <img src="images/stationsetpic2.jpg" id="stationsetpic2" class="fullsizepic">
+            <p>
+              However, it is possible to create a station in such a way that there is no route to the preposition, and therefore the prepre-position cannot be automatically calculated. For example, if you were to rotate this station 180 degrees, so that the front of the vehicle is towards the wall (as you would do when creating a charging station, for instance), you would see this:
+            </p>
+            <img src="images/stationsetpic3.jpg" id="stationsetpic3" class="fullsizepic">
+            <p>
+              AGILOX cannot drive to this station, because neither the pre-position nor prepre-position are located in an allowed driving area. The solution to creating this station, is to set a negative value for the pre-position. Of course, there will be certain other situations and station orientations that are simply not possible to accommodate, so keep in mind that if the pre-position is in a no-driving area and a prepre-position waypoint is not automatically created, in some cases it may not be possible to use that particular configuration.
+            </p>
+            <p class="paragraph-break">
+              In this example, -1500 was used for the pre-position instead of the default 1600, which will give you a suitable orientation as shown:
+            </p>
+            <img src="images/stationsetpic4.jpg" id="stationsetpic4" class="fullsizepic">
+            <p>
+              Another important consideration for the pre-position is block storage (or deep storage), i.e. having multiple rows of pallets in front of each other. Each "channel" (entry point) of pallets must have the SAME pre-position, that is, the same X-Y coordinate on the map, in order to work properly. This will be done automatically if you follow this procedure:
+            </p>
+            <ol>
+              <li>Create a station area (if you don't already have one).</li>
+              <li>Create a new station and assign it to the station area you want to use.</li>
+              <li>Ctrl-click and drag this station to create a copy in the X or Y direction. The offset is shown in the tooltip when dragging the new station - make sure either X or Y is at 0mm.</li>
+            </ol>
+            <img src="images/stationsetpic5.jpg" id="stationsetpic5" class="fullsizepic">
+            <p>
+              Every new station in a block storage area should be a copy of one of the existing stations. You can create as many "channels" (Here Station1 and Station2 are channel 1, and Station3 and Station4 are channel 2) and rows in this manner as you wish. At least 200mm of space is required between channels. To add additional channels, you should copy the "front" stations, in this case Station1 or Station3. To add additional rows to a channel, copy the back stations away from the front (i.e. copy Station2 to the left, away from Station1). Notice that each station in a channel has it's pre-position set to the exact same point - again, this is set automatically when following the procedure outlined above and should not require modifying any of the station settings.
+            </p>
+          </section>
+          <section class="main-section" id="create-charging-station">
+            <header>
+              <h1>
+                Create a Charging Station
+              </h1>
+            </header>
+            <p>
+              <b>This section assumes that a charger with pre-wired charging plate has already been installed. For additional information on this see the charger datasheets and wiring info in the Chargers section of the appendix.</b>
+            </p>
+            <p>
+              A charging station is not much different than any other station, but is probably the most important part of an AGILOX deployment since (at least for the time being) we are still bound by the same laws of physics as everyone else and our vehicles require an external power source in order to run indefinitely. The easiest way to set up a charging station is to drive an AGILOX unit to the location where you want the charging station to be using Manual Mode, and then press one of the emergency stop buttons on the vehicle. Keep in mind that since we are typically driving forwards into a charging station rather than backing in, you must ensure there is enough unobstructed space around the station at all times, as shown below. Also note that these dimensions apply to a euro-pallet (800 x 1200 mm) sized load carrier, and more space will be required for larger load types:
+            </p>
+            <div class="squarepicsdiv">
+              <img src="images/chargepic1.jpg" id="chargepic1" class="squarepic">
+            </div>
+            <p>
+              With the vehicle in place, right click the center of the unit in the HMI and create a new station. Assign a name and set the preposition to -1500 (or your desired distance, depending on the environment). It's important to note that the negative pre-position value creates a typical "forward-entry" station - <b>if you want a reverse-entry charging station, the polarity of the charging plate must be reversed</b> by swapping the large +/- cables (the outermost two).
+            </p>
+            <p>
+              Also make sure that, at a minimum, the "Charging Possible" and "Occupation Detection" options are set in the Station Options, or you can enable all the options as shown:
+            </p>
+            <div class="squarepicsdiv">
+              <img src="images/chargepic2.jpg" id="chargepic2" class="squarepic">
+              <img src="images/chargepic3.jpg" id="chargepic3" class="squarepic">
+            </div>
+            <p>
+              Now you can install the charging plate. Simply slide the charging plate under the vehicle so that it is centered under the frame. There are two bolts at the bottom of the frame that you can use as a reference for the center. The vertical surface of the charging plate should also be flush with the outer edge of the frame.
+            </p>
+            <div class="squarepicsdiv">
+              <img src="images/chargepic4.jpg" id="chargepic4" class="rectanglepic">
+              <img src="images/chargepic5.jpg" id="chargepic5" class="rectanglepic">
+            </div>
+            <p>
+              With the plate in place, mark the floor around the corners of the plate with a pencil or pieces of masking tape so you don't lose this position during installation. You can now release the emergency stop and drive the vehicle away from the charging station. For testing purposes you can stick the charging plate to the floor with some double-sided tape, or you can proceed directly to permanent mounting. The required mounting hardware is a set of four M8 concrete anchors (with M8x25 hex screw), and holes should be drilled at a diameter of 10mm to a depth of 30mm.
+            </p>
+          </section>
+          <section class="main-section" id="simple-workflow-example">
+            <header>
+              <h1>
+                Simple Workflow Example
+              </h1>
+            </header>
+            <p>
+              Let's take a look first at the simplest method of starting a workflow in the HMI. In the toolbar on the left, the third button from the top, "Start Workflow", allows you to manually trigger any workflow which has been defined in the workflow collection (Misc. Tools and Settings >> System Database Editor). Every unit comes with the following prototype workflows by default:
+            </p>
+            <div class="squarepicsdiv">
+              <img src="images/workflowpic1.jpg" id="workflowpic1" class="squarepic">
+            </div>
+            <div class="twocolumn">
+              <p>
+                These are fairly self explanatory by the names and pictures. When choosing a workflow through this menu, you will be prompted to choose the values for the variables in the workflow (usually just the source and the destination - more on that later). As an example, when you click to start a Station > Station workflow, you will see prompts similar to the ones shown on the right. By default, this workflow lists all available stations, and stations that belong to an area are sorted under the area name.
+              </p>
+              <img src="images/workflowpic2.jpg" id="workflowpic2" class="twocolumnpic">
+              <img src="images/workflowpic3.jpg" id="workflowpic3" class="twocolumnpic">
+            </div>
+            <p class="paragraph-break">
+              To see how this is implemented, go to Misc. tools and settings > System Database editor and then choose the "workflow" collection on the left side, so that you see the workflow editor as shown below. 
+            </p>
+            <img src="images/workflowpic4.jpg" id="workflowpic4" class="fullsizepic">
+            <p>
+              This is the heart of AGILOX commissioning, where all possible work orders are defined. Here you can see the same Station > Station workflow in the previous example. While this may appear overwhelming to anyone not accustomed to writing software at first glance, it's actually quite simple. AGILOX workflows are created in JSON (JavaScript Object Notation), which is essentially just a list of attribute-value pairs. Each "statement" in the workflow is in the form "attribute": "value", and a value can also be another list of attribute-value pairs by using {}. There is not really any logic to implement in the traditional sense: no if/then/else statements, no for/while loops, etc. It's really just a sequentially executed list of orders. To help you visualize this, you can also switch the code editor to "Tree" mode in the top menu bar, which shows you the structure without all of the syntax.
+            </p>
+            <img src="images/workflowpic5.jpg" id="workflowpic5" class="fullsizepic">
+            <p>
+              The code and tree editors are functionally identical and you are free to use either. But, once you get the hang of things, you will most likely find the tree view is nice to look at, but cumbersome for creating things compared to the code editor.
+            </p>
+            <p>
+              Every workflow has the same basic structure, and in fact the best way to go about creating custom workflows is to start by copying from these existing basic prototypes and then adding/modifying parameters as necessary until you get the desired result. A complete list of all the things which you can add and change would be far too long to go over here, but you can find this information in section 4.7 of the Commissioning Manual. Just to get the general idea of what you're working with, the simplest possible workflow is shown below.
+            </p>
+            <img src="images/workflowpic6.jpg" id="workflowpic6" class="fullsizepic">
+            <p>
+              Every workflow begins with a unique workflow ID ("123" in this case), which is generally a number, but can be any string of alphanumeric characters. This ID is called the Workflow Object, and every Workflow Object is required to contain the "name" and "status" attributes, in addition to the "order" object which contains the body of the workflow. You can give a workflow any name (does not have to be unique), and the status "0" simply means the workflow is enabled - the only other option here is "99" which will disable the workflow and hide it from the list of options shown in the HMI.
+            </p>
+            <p>
+              Every order object must also contain at least one action object, and each action object is processed sequentially according to the action number from lowest to highest. "0" in the example above is the only action object. You could add another action object "1" (or any number, does not have to be consecutive) which specifies an additional action/target pair that makes up the next step in the workflow.
+            </p>
+            <p class="paragraph-break">
+              One final note and you will be well on your way to writing workflows. You will notice that all the prototype workflows have a very similar structure, and define the targets as something like <code>"target": "@SOURCE;Source;station"  or "target": "@DESTINATION;Destination;stationarea"</code>. These are user-input variables, and any time you define such a variable, the HMI will automatically prompt the user to choose the target for that variable when the workflow is started.
+            </p>
+            <p>
+              Variables are defined in the form <code>"@VARIABLENAME;Description;ListOfTargets"</code>. A variable can have any name. Whatever you fill in for Description will appear at the top of the list of targets for that particular variable - this is why you always see the words "source" and "destination" in the user prompts to choose a station that appear with the prototype workflows, but you can rename these to anything you like if you have multiple sources or destinations. Finally, ListOfTargets is the list of stations or areas that are displayed in the user prompt.
+            </p>
+            <p>
+            The default keywords "station" and "stationarea" are generally sufficient since they show everything in their respective categories, but when you have hundreds or thousands of stations it can be easier to view only a specific list of stations. It is possible to create a filtered list of stations and/or areas using regex or by manually listing the stations you want - see section 4.7 of the Commissioning Manual for details.
+            </p>
+            <p>
+              Remember, you are not required to use a variable. If there is no need for the user to choose and you want the workflow to have exactly the same conditions every time it is executed, the target of an action can simply be the name of a station or station area.
+            </p>
+            <p class="paragraph-break">
+              <b>If you've made it this far, you should now have all the knowledge you need to set up and modify your AGILOX system in any way you see fit. The next section will host some more specific commonly used examples for reference, but ultimately the only way to really become proficient with this system is to use it - there is no substitute for experience. Keep frequent software/data backups, and you will be free to play around with it without having to worry about breaking things or losing progress. If you have any questions or suggestions regarding the content of this guide, please contact us at us.support@agilox.net.</b>
+            </p>
+          </section>
+          <section class="main-section" id="advanced-workflow-topics">
+            <header>
+              <h1>
+                Advanced Workflow Topics
+              </h1>
+            </header>
+            <p>
+              <b>Coming Soon!</b>
+            </p>
+          </section>
+      </main>
+</body>
