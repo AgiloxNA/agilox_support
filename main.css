@@ -197,6 +197,10 @@ b {
 #maintpic8, #maintpic10, #teachpic4, #chargepic1, #chargepic2, #chargepic3, #workflowpic2, #workflowpic3 {
   object-fit: contain;
 }
+#workflowpic2, #workflowpic3 {
+  width: 200px;
+  min-width: 200px;
+}
 #workflowpic3 {
-  margin-left: 0px;
+  margin-left: 10px;
 }
