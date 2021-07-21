@@ -23,6 +23,10 @@
       <a href="#drawing-with-inkscape" class="nav-link">Drawing with Inkscape</a>
       <a href="#basic-hmi-features" class="nav-link">Basic HMI Features</a>
       <a href="#stations-and-workflows" class="nav-link">Stations and Workflows</a>
+      <a href="#station-settings" class="nav-link">Station Settings</a>
+      <a href="#create-charging-station" class="nav-link">Create a Charging Station</a>
+      <a href="#simple-workflow-example" class="nav-link">Simple Workflow Example</a>
+      <a href="#advanced-workflow-topics" class="nav-link">Advanced Workflow Topics</a>
     </div>
     <div id="contact">
     Contact:<br>
@@ -652,5 +656,70 @@
         With the plate in place, mark the floor around the corners of the plate with a pencil or pieces of masking tape so you don't lose this position during installation. You can now release the emergency stop and drive the vehicle away from the charging station. For testing purposes you can stick the charging plate to the floor with some double-sided tape, or you can proceed directly to permanent mounting. The required mounting hardware is a set of four M8 concrete anchors (with M8x25 hex screw), and holes should be drilled at a diameter of 10mm to a depth of 30mm.
       </p>
     </section>
+    <section class="main-section" id="simple-workflow-example">
+      <header>
+        <h1>
+          Simple Workflow Example
+        </h1>
+      </header>
+      <p>
+        Let's take a look first at the simplest method of starting a workflow in the HMI. In the toolbar on the left, the third button from the top, "Start Workflow", allows you to manually trigger any workflow which has been defined in the workflow collection (Misc. Tools and Settings >> System Database Editor). Every unit comes with the following prototype workflows by default:
+      </p>
+      <div class="squarepicsdiv">
+        <img src="images/workflowpic1.jpg" id="workflowpic1" class="squarepic">
+      </div>
+      <div class="twocolumn">
+        <p>
+          These are fairly self explanatory by the names and pictures. When choosing a workflow through this menu, you will be prompted to choose the values for the variables in the workflow (usually just the source and the destination - more on that later). As an example, when you click to start a Station > Station workflow, you will see prompts similar to the ones shown on the right. By default, this workflow lists all available stations, and stations that belong to an area are sorted under the area name.
+        </p>
+        <img src="images/workflowpic2.jpg" id="workflowpic2" class="twocolumnpic">
+        <img src="images/workflowpic3.jpg" id="workflowpic3" class="twocolumnpic">
+      </div>
+      <p class="paragraph-break">
+        To see how this is implemented, go to Misc. tools and settings > System Database editor and then choose the "workflow" collection on the left side, so that you see the workflow editor as shown below. 
+      </p>
+      <img src="images/workflowpic4.jpg" id="workflowpic4" class="fullsizepic">
+      <p>
+        This is the heart of AGILOX commissioning, where all possible work orders are defined. Here you can see the same Station > Station workflow in the previous example. While this may appear overwhelming to anyone not accustomed to writing software at first glance, it's actually quite simple. AGILOX workflows are created in JSON (JavaScript Object Notation), which is essentially just a list of attribute-value pairs. Each "statement" in the workflow is in the form "attribute": "value", and a value can also be another list of attribute-value pairs by using {}. There is not really any logic to implement in the traditional sense: no if/then/else statements, no for/while loops, etc. It's really just a sequentially executed list of orders. To help you visualize this, you can also switch the code editor to "Tree" mode in the top menu bar, which shows you the structure without all of the syntax.
+      </p>
+      <img src="images/workflowpic5.jpg" id="workflowpic5" class="fullsizepic">
+      <p>
+        The code and tree editors are functionally identical and you are free to use either. But, once you get the hang of things, you will most likely find the tree view is nice to look at, but cumbersome for creating things compared to the code editor.
+      </p>
+      <p>
+        Every workflow has the same basic structure, and in fact the best way to go about creating custom workflows is to start by copying from these existing basic prototypes and then adding/modifying parameters as necessary until you get the desired result. A complete list of all the things which you can add and change would be far too long to go over here, but you can find this information in section 4.7 of the Commissioning Manual. Just to get the general idea of what you're working with, the simplest possible workflow is shown below.
+      </p>
+      <img src="images/workflowpic6.jpg" id="workflowpic6" class="fullsizepic">
+      <p>
+        Every workflow begins with a unique workflow ID ("123" in this case), which is generally a number, but can be any string of alphanumeric characters. This ID is called the Workflow Object, and every Workflow Object is required to contain the "name" and "status" attributes, in addition to the "order" object which contains the body of the workflow. You can give a workflow any name (does not have to be unique), and the status "0" simply means the workflow is enabled - the only other option here is "99" which will disable the workflow and hide it from the list of options shown in the HMI.
+      </p>
+      <p>
+        Every order object must also contain at least one action object, and each action object is processed sequentially according to the action number from lowest to highest. "0" in the example above is the only action object. You could add another action object "1" (or any number, does not have to be consecutive) which specifies an additional action/target pair that makes up the next step in the workflow.
+      </p>
+      <p class="paragraph-break">
+        One final note and you will be well on your way to writing workflows. You will notice that all the prototype workflows have a very similar structure, and define the targets as something like <code>"target": "@SOURCE;Source;station"  or "target": "@DESTINATION;Destination;stationarea"</code>. These are user-input variables, and any time you define such a variable, the HMI will automatically prompt the user to choose the target for that variable when the workflow is started.
+      </p>
+      <p>
+        Variables are defined in the form <code>"@VARIABLENAME;Description;ListOfTargets"</code>. A variable can have any name. Whatever you fill in for Description will appear at the top of the list of targets for that particular variable - this is why you always see the words "source" and "destination" in the user prompts to choose a station that appear with the prototype workflows, but you can rename these to anything you like if you have multiple sources or destinations. Finally, ListOfTargets is the list of stations or areas that are displayed in the user prompt.
+      </p>
+      <p>
+      The default keywords "station" and "stationarea" are generally sufficient since they show everything in their respective categories, but when you have hundreds or thousands of stations it can be easier to view only a specific list of stations. It is possible to create a filtered list of stations and/or areas using regex or by manually listing the stations you want - see section 4.7 of the Commissioning Manual for details.
+      </p>
+      <p>
+        Remember, you are not required to use a variable. If there is no need for the user to choose and you want the workflow to have exactly the same conditions every time it is executed, the target of an action can simply be the name of a station or station area.
+      </p>
+      <p class="paragraph-break">
+        <b>If you've made it this far, you should now have all the knowledge you need to set up and modify your AGILOX system in any way you see fit. The next section will host some more specific commonly used examples for reference, but ultimately the only way to really become proficient with this system is to use it - there is no substitute for experience. Keep frequent software/data backups, and you will be free to play around with it without having to worry about breaking things or losing progress. If you have any questions or suggestions regarding the content of this guide, please contact us at us.support@agilox.net.</b>
+      </p>
+    </section>
+    <section class="main-section" id="advanced-workflow-topics">
+      <header>
+        <h1>
+          Advanced Workflow Topics
+        </h1>
+      </header>
+      <p>
+        <b>Coming Soon!</b>
+      </p>
   </main>
 </body>

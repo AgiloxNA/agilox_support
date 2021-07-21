@@ -194,6 +194,9 @@ b {
 #teachpic1 {
   width: 500px;
 }
-#maintpic8, #maintpic10, #teachpic4, #chargepic1, #chargepic2, #chargepic3 {
+#maintpic8, #maintpic10, #teachpic4, #chargepic1, #chargepic2, #chargepic3, #workflowpic2, #workflowpic3 {
   object-fit: contain;
+}
+#workflowpic3 {
+  margin-left: 0px;
 }
