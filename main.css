@@ -174,16 +174,7 @@ b {
 #powerpic2 {
   object-position: 50% 95%;
 }
-#maintpic4 {
-  object-position: 0% 50%;
-}
-#maintpic8 {
-  object-fit: contain;
-}
-#maintpic10 {
-  object-fit: contain;
-}
-#manualpic3 {
+#maintpic4, #manualpic3 {
   object-position: 0% 50%;
 }
 .fullsizepic {
@@ -203,6 +194,6 @@ b {
 #teachpic1 {
   width: 500px;
 }
-#teachpic4 {
+#maintpic8, #maintpic10, #teachpic4, #chargepic1, #chargepic2, #chargepic3 {
   object-fit: contain;
 }
