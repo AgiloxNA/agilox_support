@@ -213,3 +213,16 @@ b {
 #workflowpic3 {
   margin-left: 10px;
 }
+.resource-links {
+  display: block;
+  margin: auto;
+  padding: 10px 100px;
+}
+.resource-link {
+  display: block;
+  text-decoration: underline;
+  color: #444F60;
+}
+.resource-link:hover {
+  color: #9c3;
+}

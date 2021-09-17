@@ -1,0 +1,63 @@
+GIMP Palette
+Name: AGILOX
+Channels: RGBA
+Columns: 1
+#
+255 255 255   #ffffff
+102 102 102   #666666 (room)
+230 230 230   #e6e6e6 (blocked)
+153 255  85   #99ff55 (track)
+199 255 161   #c7ffa1 (direction)
+190 232  66   #bee842 (avoidance)
+255 255  00   #ffff00 (action)
+255 206  13   #ffce0d (surveillance)
+  0   0   0   #000000
+255 255 255   ---
+249 168   0   #F9A800 ISO7010 warning
+155  36  35   #9B2423 ISO7010 prohibition / fire protection
+  0  83 135   #005387 ISO7010 commandment
+ 35 127  82   #237F52 ISO7010 rescue
+236 236 231   #ECECE7 ISO7010 symbol border
+ 43  43  44   #2B2B2C ISO7010 symbol
+255 255 255   ---
+102 102 102   room primary 0
+196 195 195   room primary 1
+148 148 148   room primary 2
+ 45  45  45   room primary 3
+  4   3   3   room primary 4
+255 255 255   ---
+230 230 230   blocked primary 0
+255 255 255   blocked primary 1
+255 255 255   blocked primary 2
+185 185 185   blocked primary 3
+141 139 139   blocked primary 4
+255 255 255   ---
+152 255  85   track primary 0
+212 255 184   track primary 1
+179 255 129   track primary 2
+125 255  41   track primary 3
+100 254   0   track primary 4
+255 255 255   ---
+198 255 161   direction primary 0
+255 255 255   direction primary 1
+234 255 221   direction primary 2
+169 255 114   direction primary 3
+142 254  69   direction primary 4
+255 255 255   ---
+190 232  66   avoidance primary 0
+222 248 145   avoidance primary 1
+208 244 102   avoidance primary 2
+169 219  22   avoidance primary 3
+127 167  10   avoidance primary 4
+255 255 255   ---
+255 255   0   action primary 0
+255 255 100   action primary 1
+255 255  57   action primary 2
+198 198   0   action primary 3
+155 155   0   action primary 4
+255 255 255   ---
+255 206  13   surveillance primary 0
+255 225 105   surveillance primary 1
+255 216  64   surveillance primary 2
+204 163   0   surveillance primary 3
+161 128   0   surveillance primary 4
