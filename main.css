@@ -22,6 +22,14 @@ body {
   overflow: auto;
   margin-bottom: 10%;
 }
+.nested-shown {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+.nested-hidden {
+  display: none;
+}
 #logo {
   margin-top: 30px;
   width: 50%;
