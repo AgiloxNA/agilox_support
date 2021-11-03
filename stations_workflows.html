@@ -1,27 +1,50 @@
 <!DOCTYPE html>
 <head>
     <link rel="stylesheet" href="main.css">
+    <script src="script.js" defer></script>
   </head> 
 <body>
-    <nav id="navbar">
-        <header>
-          <a href="index.html"><img src="images/agilox-white.svg" id="logo"></a>
-          <h1 id="nav-title">
-            Stations and Workflows
-          </h1>
-        </header>
-        <div id="nav-links">
-            <a href="#station-settings" class="nav-link">Station Settings</a>
-            <a href="#create-charging-station" class="nav-link">Create a Charging Station</a>
-            <a href="#simple-workflow-example" class="nav-link">Simple Workflow Example</a>
-            <a href="#advanced-workflow-topics" class="nav-link">Advanced Workflow Topics</a>
-            <a href="commissioning_guide.html" class="back-link">Go Back</a>
+  <nav id="navbar">
+    <header>
+      <a href="index.html"><img src="images/agilox-white.svg" id="logo"></a>
+      <h1 id="nav-title">
+        Commissioning Guide
+      </h1>
+    </header>
+    <div id="nav-links">
+      <div id="init_setup" class="nav-link">
+        Initial Setup
+        <div class="nested-hidden">
+          <a href="initial_setup.html#lidar-installation" class="nav-link2">LiDAR Installation</a>
+          <a href="initial_setup.html#powering-on" class="nav-link2">Powering On</a>
+          <a href="initial_setup.html#maintenance-mode" class="nav-link2">Maintenance Mode</a>
+          <a href="initial_setup.html#manual-mode" class="nav-link2">Manual Mode</a>
         </div>
-        <div id="contact">
-        Contact:<br>
-          <span id="email">jacob.dunn@agilox.net<br>sonny.bucci@agilox.net</span>
+      </div>
+      <div id="init_setup" class="nav-link">
+        Creating the Map
+        <div class="nested-hidden">
+          <a href="creating_map.html#auto-teach-function" class="nav-link2">Auto-Teach Function</a>
+          <a href="creating_map.html#inkscape-configuration" class="nav-link2">Inkscape Configuration</a>
+          <a href="creating_map.html#drawing-with-inkscape" class="nav-link2">Drawing with Inkscape</a>
+          <a href="creating_map.html#basic-hmi-features" class="nav-link2">Basic HMI Features</a>
         </div>
-      </nav>
+      </div>
+      <div id="init_setup" class="nav-link">
+        Stations and Workflows
+        <div class="nested-hidden">
+          <a href="#station-settings" class="nav-link2">Station Settings</a>
+          <a href="#create-charging-station" class="nav-link2">Create a Charging Station</a>
+          <a href="#simple-workflow-example" class="nav-link2">Simple Workflow Example</a>
+          <a href="#advanced-workflow-topics" class="nav-link2">Advanced Workflow Topics</a>
+        </div>
+      </div>
+    </div>
+    <div id="contact">
+      Contact:<br>
+      <span id="email">jacob.dunn@agilox.net<br>sonny.bucci@agilox.net</span>
+    </div>
+  </nav>
 
       <main id="main-doc">
         <section class="main-section" id="stations-and-workflows">

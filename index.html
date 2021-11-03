@@ -1,8 +1,10 @@
 <!DOCTYPE html>
+
 <head>
-    <link rel="stylesheet" href="main.css">
-    <script src="script.js" defer></script>
-  </head> 
+  <link rel="stylesheet" href="main.css">
+  <script src="script.js" defer></script>
+</head>
+
 <body>
   <nav id="navbar">
     <header>
@@ -11,21 +13,35 @@
         Support Materials
       </h1>
     </header>
-    <div id="cmsn_guide" class="nav-link">Commissioning Guide</div>
-    <div class="nested-hidden">
-      <a href="initial_setup.html" class="nav-link">Initial Setup</a>
-      <a href="creating_map.html" class="nav-link">Creating the Map</a>
-      <a href="stations_workflows.html" class="nav-link">Stations and Workflows</a>
+    <div id="nav-links">
+      <div id="cmsn_guide" class="nav-link">
+        Commissioning Guide
+        <div class="nested-hidden">
+          <a href="initial_setup.html" class="nav-link2">Initial Setup</a>
+          <a href="creating_map.html" class="nav-link2">Creating the Map</a>
+          <a href="stations_workflows.html" class="nav-link2">Stations and Workflows</a>
+        </div>
+      </div>
+      <div id="ocf_setup" class="nav-link">
+        OCF Initial Setup
+        <div class="nested-hidden">
+          <a href="#introduction" class="nav-link2">Introduction</a>
+          <a href="#tools_required" class="nav-link2">Tools Required</a>
+          <a href="#uncrating" class="nav-link2">Uncrating</a>
+          <a href="#assembly" class="nav-link2">Assembly</a>
+          <a href="#settings" class="nav-link2">Settings</a>
+        </div>
+      </div>
+      <div id="du_replace" class="nav-link">Drive Unit Replacement Video</div>
+      <div id="resources" class="nav-link">Resources</div>
     </div>
-    <a href="ocf_guide.html" class="nav-link">OCF Initial Setup</a>
-    <a href="du_video.html" class="nav-link">Drive Unit Replacement Video</a>
-    <a href="resources.html" class="nav-link">Resources</a>
-    <div id="contact">
-    Contact:<br>
-      <span id="email">jacob.dunn@agilox.net<br>sonny.bucci@agilox.net</span>
-    </div>
+    <address id="contact">
+      Contact:<br>
+      <a href="mailto:jacob.dunn@agilox.net" id="email">jacob.dunn@agilox.net</a><br>
+      <a href="mailto:sonny.bucci@agilox.net" id="email">sonny.bucci@agilox.net</a>
+    </address>
   </nav>
-  
+
   <main id="main-doc">
     <section class="main-section" id="welcome">
       <header>
@@ -34,13 +50,15 @@
         </h1>
       </header>
       <p style="margin-top: 50px;">
-        Hello, and welcome to the <b>AGILOX North America Support Site</b>! This site is intended to be a resource for AGILOX employees and clients to learn how to perform common tasks related to servicing AGILOX IGVs.
+        Hello, and welcome to the <b>AGILOX North America Support Site</b>! This site is intended to be a resource for
+        AGILOX employees and clients to learn how to perform common tasks related to servicing AGILOX IGVs.
       </p>
       <p style="margin-top: 50px;">
         <b>Please select an option from the side menu to get started!</b>
       </p>
       <p style="margin-top: 50px;">
-      <i>This site is a work in progress and subject to change. Please contact Jacob Dunn or Sonny Bucci for more information.</i>
+        <i>This site is a work in progress and subject to change. Please contact Jacob Dunn or Sonny Bucci for more
+          information.</i>
       </p>
     </section>
   </main>

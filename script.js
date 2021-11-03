@@ -1,10 +1,13 @@
-let mainNav = document.getElementById("cmsn_guide");
-let nestedNav = document.querySelector(".nested-hidden");
+let mainNav = document.querySelectorAll(".nav-link");
 
-mainNav.addEventListener("click", function() {
-    if (nestedNav.className.includes("hidden") === true) {
-        nestedNav.className = "nested-shown";
-    } else if (nestedNav.className.includes("shown") === true) {
-        nestedNav.className = "nested-hidden";
-    }
-});
+for (let i = 0; i < mainNav.length; i++) {
+    mainNav[i].addEventListener("click", function() {
+        let nestedNav = mainNav[i].firstElementChild;
+        if (nestedNav.className.includes("hidden")) {
+            nestedNav.className = "nested-shown";
+        } else {
+            nestedNav.className = "nested-hidden";
+        }
+    })
+}
+
