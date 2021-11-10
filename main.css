@@ -28,7 +28,24 @@ body {
   margin-left: 20px;
   margin-top: 10px;
 }
+.nested-shown2 {
+  display: flex;
+  flex-direction: column;
+  margin-left: 35px;
+  margin-top: 10px;
+}
+.nested-links {
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+.nested-links2 {
+  display: flex;
+  flex-direction: column;
+}
 .nested-hidden {
+  display: none;
+}
+.nested-hidden2 {
   display: none;
 }
 #logo {
@@ -54,7 +71,6 @@ body {
   text-transform: uppercase;
   margin-top: 10px;
   margin-bottom: 10px;
-  margin-right: 75px;
 }
 .back-link {
   color: #9c3;
@@ -65,10 +81,28 @@ body {
 .back-link:hover {
   color: #fff;
 }
-.nav-link:hover, .nav-link2:hover {
+.nav-link2:hover {
   color: #9c3;
   border-color: white;
+
+}
+.expand {
+  color: #9c3;
+  font-weight: normal;
+  font-size: 20px;
+}
+.expand:hover {
+  font-weight: bold;
   cursor: pointer;
+}
+.nav-link-text {
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.nav-link-text:hover {
+  color: #9c3;
 }
 #contact {
   margin-top: auto;

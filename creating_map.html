@@ -1,329 +1,490 @@
 <!DOCTYPE html>
+
 <head>
-    <link rel="stylesheet" href="main.css">
-    <script src="script.js" defer></script>
-  </head> 
+  <link rel="stylesheet" href="main.css">
+  <script src="script.js" defer></script>
+</head>
+
 <body>
   <nav id="navbar">
     <header>
       <a href="index.html"><img src="images/agilox-white.svg" id="logo"></a>
       <h1 id="nav-title">
-        Commissioning Guide
+        Support Materials
       </h1>
     </header>
     <div id="nav-links">
-      <div id="init_setup" class="nav-link">
-        Initial Setup
+      <div id="cmsn_guide" class="nav-link">
+        <span class="expand">+</span>
+        <a href="commissioning_guide.html" class="nav-link-text">Commissioning Guide</a>
         <div class="nested-hidden">
-          <a href="initial_setup.html#lidar-installation" class="nav-link2">LiDAR Installation</a>
-          <a href="initial_setup.html#powering-on" class="nav-link2">Powering On</a>
-          <a href="initial_setup.html#maintenance-mode" class="nav-link2">Maintenance Mode</a>
-          <a href="initial_setup.html#manual-mode" class="nav-link2">Manual Mode</a>
+          <div class="nested-links">
+            <span class="expand">+</span>
+            <a href="commissioning_guide.html" class="nav-link2">Introduction & Initial Setup</a>
+            <div class="nested-hidden2">
+              <div class="nested-links2">
+                <a href="commissioning_guide.html#lidar-installation" class="nav-link2">Lidar Installation</a>
+                <a href="commissioning_guide.html#powering-on" class="nav-link2">Powering On</a>
+                <a href="commissioning_guide.html#maintenance-mode" class="nav-link2">Maintenance Mode</a>
+                <a href="commissioning_guide.html#manual-mode" class="nav-link2">Manual Mode</a>
+              </div>
+            </div>
+          </div>
+          <div class="nested-links">
+            <span class="expand">+</span>
+            <a href="creating_map.html" class="nav-link2">Creating the Map</a>
+            <div class="nested-hidden2">
+              <div class="nested-links2">
+                <a href="creating_map.html#auto-teach-function" class="nav-link2">Auto-Teach Function</a>
+                <a href="creating_map.html#inkscape-configuration" class="nav-link2">Inkscape Configuration</a>
+                <a href="creating_map.html#drawing-with-inkscape" class="nav-link2">Drawing with Inkscape</a>
+                <a href="creating_map.html#basic-hmi-features" class="nav-link2">Basic HMI Features</a>
+              </div>
+            </div>
+          </div>
+          <div class="nested-links">
+            <span class="expand">+</span>
+            <a href="stations_workflows.html" class="nav-link2">Stations and Workflows</a>
+            <div class="nested-hidden2">
+              <div class="nested-links2">
+                <a href="stations_workflows.html#station-settings" class="nav-link2">Station Settings</a>
+                <a href="stations_workflows.html#create-charging-station" class="nav-link2">Create a Charging Station</a>
+                <a href="stations_workflows.html#simple-workflow-example" class="nav-link2">Simple Workflow Example</a>
+                <a href="stations_workflows.html#advanced-workflow-topic" class="nav-link2">Advanced Workflow Topics</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div id="init_setup" class="nav-link">
-        Creating the Map
+      <div id="ocf_setup" class="nav-link" style="margin-top: 5px;">
+        <span class="expand">+</span>
+        <a href="ocf_guide.html" class="nav-link-text">OCF Initial Setup</span>
         <div class="nested-hidden">
-          <a href="#auto-teach-function" class="nav-link2">Auto-Teach Function</a>
-          <a href="#inkscape-configuration" class="nav-link2">Inkscape Configuration</a>
-          <a href="#drawing-with-inkscape" class="nav-link2">Drawing with Inkscape</a>
-          <a href="#basic-hmi-features" class="nav-link2">Basic HMI Features</a>
+          <a href="ocf_guide.html#introduction" class="nav-link2">Introduction</a>
+          <a href="ocf_guide.html#tools_required" class="nav-link2">Tools Required</a>
+          <a href="ocf_guide.html#uncrating" class="nav-link2">Uncrating</a>
+          <a href="ocf_guide.html#assembly" class="nav-link2">Assembly</a>
+          <a href="ocf_guide.html#settings" class="nav-link2">Settings</a>
         </div>
       </div>
-      <div id="init_setup" class="nav-link">
-        Stations and Workflows
-        <div class="nested-hidden">
-          <a href="stations_workflows.html#station-settings" class="nav-link2">Station Settings</a>
-          <a href="stations_workflows.html#create-charging-station" class="nav-link2">Create a Charging Station</a>
-          <a href="stations_workflows.html#simple-workflow-example" class="nav-link2">Simple Workflow Example</a>
-          <a href="stations_workflows.html#advanced-workflow-topics" class="nav-link2">Advanced Workflow Topics</a>
-        </div>
-      </div>
+      <div id="du_replace" class="nav-link">Drive Unit Replacement Video</div>
+      <div id="resources" class="nav-link">Resources</div>
     </div>
-    <div id="contact">
+    <address id="contact">
       Contact:<br>
-      <span id="email">jacob.dunn@agilox.net<br>sonny.bucci@agilox.net</span>
-    </div>
+      <a href="mailto:jacob.dunn@agilox.net" id="email">jacob.dunn@agilox.net</a><br>
+      <a href="mailto:sonny.bucci@agilox.net" id="email">sonny.bucci@agilox.net</a>
+    </address>
   </nav>
 
-      <main id="main-doc">
-        <section class="main-section" id="creating-the-map">
-            <header>
-              <h1>
-                Creating the Map
-              </h1>
-            </header>
-            <p>
-              Items required for this section:
-            </p>
-            <ul>
-              <li>WiFi-enabled laptop (smartphone may also be used for driving)</li>
-              <li>The free and open source drawing program Inkscape: <a href="https://inkscape.org/release/inkscape-1.0/" class="main-link">click here to download</a></li>
-              <li>At least one active AGILOX vehicle that has been through the <a href="#initial-setup" class="main-link">Initial Setup</a> process</li>
-            </ul>
-          </section>
-          <section class="main-section" id="auto-teach-function">
-            <header>
-              <h1>
-                Auto-Teach Function
-              </h1>
-            </header>
-            <p>
-              Before we begin to create the map, use Manual Mode to drive the unit into the intended operating area. It should be parked initially in an area with a clear view of fixed reference points, such as a wall and other structural features of the building which are unobstructed by crates or other materials, and ideally beginning about 20-30 feet away from and facing the center of one of the walls. Below is an example of the driving procedure for the teaching function. It's best to drive in a roughly star-like or saw-tooth pattern as shown, rather than driving in circles along the walls:
-            </p>
-            <img src="images/teachpic1.jpg" id="teachpic1" class="fullsizepic">
-            <p>
-              The area shown here is relatively small, and in fact a room this size may be adequately mapped with a single scan, which may not require any driving at all. Note the pattern shown in this example is for illustration purposes and not necessarily to scale. 
-            </p>
-            <div class="twocolumn">
-              <div>
-                <p>
-                  One last thing before you begin: in order to see what you're doing, you will need to enable some visibility options in the HMI. Go the second button up from the bottom on the left hand side (Visualization Toggles) and select "Show scan data in visualization" and "Show map in visualization" (the two highlighted in green here).
-                </p>
-                <p>
-                  The scan data option will show you dark and light blue lines, which represent the vision of the floor-level safety scanners, as well as green lines, which show data from the navigation scanner on top. The show map option will show black lines which represent the reference points that have been taught as part of the map. There will not be any black lines just yet, since we have to create them!
-                </p>
-              </div>
-              <img src="images/teachpic2.jpg" id="teachpic2" class="twocolumnpic">
-            </div>
-            <p class="paragraph-break">
-              Now as in the last section, go to the Manual Drive page, and click on the button next to #3 to add a new contour from the navigation scanner.
-            </p>
-            <img src="images/teachpic3.jpg" id="teachpic3" class="fullsizepic">
-            <div class="twocolumn">
-              <div>
-                <p>
-                  In the window that pops up, first select "Rectangular Snap" and then click Enable AutoTeach.
-                </p>
-              </div>
-              <img src="images/teachpic4.jpg" id="teachpic4" class="twocolumnpic">
-            </div>
-            <p class="paragraph-break">
-              Now the unit will begin scanning the environment. There are audio-visual cues to let you know that scanning is in progress and when it is done. Begin driving the unit in the mapping pattern shown above. When the navigation match drops below a certain level, it will automatically stop and perform another scan. It's also a good idea to keep an eye on the map as it is being built, so that you can ensure the dimensions of the defined map area can accommodate the scan data - it is helpful here to have your laptop on the map view and use your phone for manual driving. Go to the misc. tools and settings tab in the HMI and click the map settings button, so that a window that looks like this comes up:
-            </p>
-            <img src="images/teachpic5.jpg" id="teachpic5" class="fullsizepic">
-            <p>
-              You will have to experiment with the dimensions and offsets to fit the map area into the window the way you want. Note that all of the information that AGILOX captures about the environment is always stored in the map, even if you can't see it. If you start driving and auto-teaching outside of the defined map area, or if you shrink or shift the map in such a way that a previously visible portion disappears, the information will not be lost. You can simply adjust the map until it is visible again - however, anything outside of the defined map area cannot be used for navigation purposes, so the auto-teach process will be faster and more accurate if you keep adjusting the map to contain everything within the visible area.
-            </p>
-            <p class="paragraph-break">
-              When finished mapping: from your computer, go back to the main menu by clicking the AGILOX logo in the top left if you are not already there. For the next step, we need to download the map file that we have created, by clicking the download button on the right hand side. But first, a little cleanup may be necessary.
-            </p>
-            <p>
-              When the "show map" visualization is enabled, you can also see all of the scan points here on the right hand side. You can toggle the visibility of or delete specific map teaching increments here, and by hovering your mouse over the numbers you will see which segments are included in that iteration highlighted in red.
-            </p>
-            <p>
-              Finally, the last button under the visualization toggles tab, "Erase map areas," will allow you delete specific portions of the map. This is useful for removing small sections of erroneous information from the map, such as scan points picked up by people's heads, crates, forklifts, or other temporary obstacles that you don't want to be a part of the permanent map data.
-            </p>
-            <p>
-              When cleanup is finished and the map is properly sized and rotated, download the map file.
-            </p>
-            <img src="images/teachpic6.jpg" id="teachpic6" class="fullsizepic">
-          </section>
-          <section class="main-section" id="inkscape-configuration">
-            <header>
-              <h1>
-                Inkscape Configuration
-              </h1>
-            </header>
-            <p>
-              <a href="https://inkscape.org/release" class="main-link">Download the latest version of Inkscape here</a>
-            </p>
-            <p>
-              To facilitate the processing of AGILOX maps, some menu windows (1) and the color palette from the documentation (2) are required.
-            </p>
-            <div class="twocolumn">
-              <div>
-                <h2>
-                  Settings Menu
-                </h2>
-                <p>
-                  The settings of the menus and windows are saved in the file <code>preferences.xml</code> (file can be downloaded below). This file must be copied into the directory for the local Inkscape settings. This directory is usually located under <code>C:\Users\<User>\AppData \Roaming\inkscape</code>
-                </p>
-                <h2>
-                  Color Palette
-                </h2>
-                <p>
-                  The color palette for the AGILOX standard map colors is saved in the file agilox.gpl (file can be downloaded below). This file is to be copied into the directory for the local customer-specific color palettes from Inkscape. This directory is usually located at <code>C:\Users\<User>\AppData \Roaming\inkscape\palettes</code>
-                </p>
-                <p>
-                  <b>After both files have been copied, please restart Inkscape.</b>
-                </p>
-                <p>
-                  <a href="docs/preferences.xml" download class="main-link">Preferences</a><br>
-                  <a href="docs/agilox.gpl" download class="main-link">Color Palette</a>
-                </p>
-              </div>
-              <img src="images/inkpic1.jpg" id="inkpic1" class="twocolumnpic-bigger">
-            </div>
-            <div class="twocolumn">
-              <div>
-                <h2>
-                  Note
-                </h2>
-                <p>
-                  If the AGILOX color palette is not automatically displayed after the restart, then it must be selected manually.
-                  </p>
-                <p>
-                  By clicking on the arrow on the right edge of the color palette (1), a menu for selecting the color palette <b>AGILOX</b> (2) appears.
-                </p>
-              </div>
-              <img src="images/inkpic2.jpg" id="inkpic2" class="twocolumnpic-bigger">
-            </div>
-          </section>
-          <section class="main-section" id="drawing-with-inkscape">
-            <header>
-              <h1>
-                Drawing with Inkscape
-              </h1>
-            </header>
-            <p>
-              Once Inkscape is properly configured, use it to open your map.svg file.
-            </p>
-            <h2>
-              Basic Information and Controls
-            </h2>
-            <ul>
-              <li>Navigation is accomplished with the mouse wheel and middle mouse button. Scrolling the  mouse wheel moves the image up and down, holding down the SHIFT key and scrolling the mouse wheel moves left and right, and holding down the CTRL key and scrolling the mouse wheel zooms in and out. You can also hold down the wheel button (middle click) and move the mouse to pan freely, tap the middle click button to zoom in, and tap the middle click button while holding SHIFT to zoom out. If you are lacking a good middle mouse button, hold down CTRL and use the arrow keys to pan, and use the +/- buttons to zoom in and out.</li>
-              <li>When you are sufficiently zoomed in, you can see major and minor grid lines in the background. The minor grid lines represent a real-world distance of 100 mm, and each major grid line is made up of a 5x5 grid of 100 mm square blocks for a total of 0.5 m. When you zoom out, at a certain point the minor grid disappears and you can only see the half-meter blocks.</li>
-              <li>There are several layers in the map file (as seen in the bottom right corner) - station, contour, blocked, and general. The only layers you need to work with are blocked and general. <b>Don't try to edit the station or contour layers</b>, as these are automatically generated in and handled by the HMI and are only shown in the map file for reference.</li>
-              <li>It is very important to make sure that you are working in the correct layer at all times. The blocked layer is used to draw permanent obstacles in the map, such as walls, shelves, holes in the floor, or generally any area AGILOX should not attempt to drive through. The general layer is used to create everything else - action areas for I/O, one-way lanes, crossing or reduced speed zones, tracks, and many other types of programmable actions.</li>
-              <li>The color palette along the bottom is used to give the map a standardized appearance, however, the color has no effect on functionality. You may use any color you wish for any type of area, but keeping the appearance consistent makes it quick and easy for AGILOX technicians to understand your process and make changes if necessary. The most commonly used colors are on the left, and if you hover your mouse over a color swatch you will see the name of the type of area it is used for.</li>
-            </ul>
-            <img src="images/drawpic1.jpg" id="drawpic1" class="fullsizepic">
-            <p>
-              Notice that, similar to the picture below, there is a square/rectangle around the map scan data. This is the area that was defined by the map dimensions you entered in the HMI previously. To start, we are going to create a blocked rectangle over this entire defined area. Then we add or cut away parts of this to define the room and the "allowed" areas. The general procedure for creating objects/areas in the map shown below is to (1) ensure the correct layer is selected (blocked in this case), (2) select the rectangle tool at the top left, then (3) choose the color - we will be starting with "blocked" (#e6e6e6).
-            </p>
-            <img src="images/drawpic2.jpg" id="drawpic2" class="fullsizepic">
-            <p>
-              Start by covering the defined map area with a blocked rectangle, like this:
-            </p>
-            <img src="images/drawpic3.jpg" id="drawpic3" class="fullsizepic">
-            <div class="twocolumn">
-              <div>
-                <p>
-                  If you need to resize the shape, click on the select tool (mouse pointer) just above the rectangle tool, or press S. <b>Press ESC when you are done to clear the selection</b>. Next we will define the room, i.e. the walls and other permanent features of the building, by covering ALL of the walls with another blocked rectangle using the room color.
-                </p>
-              </div>
-              <img src="images/drawpic4.jpg" id="drawpic4" class="twocolumnpic">
-            </div>
-            <div class="twocolumn">
-              <div>
-                <p>
-                  Now we can begin cutting out the sections that don't belong to the room or blocked areas. Draw another rectangle (we will call this the "<b>top</b>" object) over an area that you want to delete , then choose the select tool or press S, so that you see black arrows around the object like this...
-                </p>
-              </div>
-              <img src="images/drawpic5.jpg" id="drawpic5" class="twocolumnpic">
-            </div>
-            <div class="twocolumn">
-              <div>
-                <p>
-                  ...Then, hold down SHIFT and left click on the area you want to cut from, in this case the bigger dark grey "room" rectangle (we will call this the "<b>bottom</b>" object).
-                </p>
-              </div>
-              <img src="images/drawpic6.jpg" id="drawpic6" class="twocolumnpic">
-            </div>
-            <div class="twocolumn">
-              <div>
-                <p>
-                  Now hold CTRL and press the "-" (minus) key. This will subtract the top area from the bottom. This is more or less all you need to know to work with Inkscape for the purposes of this tutorial: make a big object for the bottom which covers everything you want to cover, make another object that covers the area to be deleted on top, select the top object, SHIFT click on the bottom object, press CTRL - to delete. Now you will see something like this:
-                </p>
-              </div>
-              <img src="images/drawpic7.jpg" id="drawpic7" class="twocolumnpic">
-            </div>
-            <p class="paragraph-break">
-              It's also possible to do the opposite of this, by creating two objects and combining them into one. Use the same shift-click procedure as before to select both objects, then hold both the CTRL and SHIFT keys and press "+" to combine. Here is another example:
-            </p>
-            <div class="squarepicsdiv">
-              <img src="images/drawpic8.jpg" id="drawpic8" class="threepicsmall">
-              <img src="images/drawpic9.jpg" id="drawpic9" class="threepicsmall">
-              <img src="images/drawpic10.jpg" id="drawpic10" class="threepicsmall">
-            </div>
-            <p>
-              Keep going with these techniques to cover only walls, columns, and other permanent features of the building in the dark grey "room" color. Then, use the same techniques to cut away from the light grey "blocked" area to reveal the white background, which is considered free driving area. Some spaces which might remain covered in the light grey area include shelving/racking, work benches, grated floors, pedestrian walkways, or anywhere else driving should not be allowed. From inside the driving area, cover the walls only as much a necessary, then leave an extra 2-3 squares on the outside to ensure visibility, like this:
-            </p>
-            <img src="images/drawpic11.jpg" id="drawpic11" class="fullsizepic">
-            <div class="twocolumn">
-              <div>
-                <p>
-                  The example map finished: Walls are dark grey, driving prohibited areas are light grey, and free driving area is the blank white background. Before you go to the next section, add at least one action (yellow) area in the general layer like the one shown here as well - you can always remove it later. If you create an action area in the blocked layer by mistake (or vice versa), you can change the layer of an object by selecting it, right clicking on it, then choose "Move to Layer...", select general, and press move.
-                </p>
-              </div>
-              <img src="images/drawpic12.jpg" id="drawpic12" class="twocolumnpic">
-            </div>
-            <p class="paragraph-break">
-              When finished editing the map, be sure to save the file before closing Inkscape. Now go to your Downloads folder (or wherever you saved the map file), and drag and drop the map file from Windows explorer into the HMI window in your browser. This will automatically update the map for all units in the Union if more than one unit is connected.
-            </p>
-            <img src="images/drawpic13.jpg" id="drawpic13" class="fullsizepic">
-            <img src="images/drawpic14.jpg" id="drawpic14" class="fullsizepic">
-          </section>
-          <section class="main-section" id="basic-hmi-features">
-            <header>
-              <h1>
-                Basic HMI Features
-              </h1>
-            </header>
-            <p>
-              With the map uploaded, there are some additional features to be aware of before we get into creating stations and workflows. When interacting with the map in the HMI, you can right click anywhere (or tap and hold on a touch-screen device) to bring up the Action menu, which will always give you a few actions to perform:
-            </p>
-            <ul>
-              <li><b>Drive to Target:</b> Only used in automatic mode, sends the unit to the desired position automatically.</li>
-              <li><b>New Station:</b> Used to create new stations, as well as waypoints and IO links. If you right click in between the forks of an AGILOX vehicle before choosing this option, the new station will be created in the same position and orientation as the vehicle.</li>
-              <li><b>New StationArea:</b> Creates a new group name to be used by stations which are all to be considered as a single origin/destination point. For example, when you want to bring one of many identical pallets to a general area of the map, but you don't care which exact station it ends up in.</li>
-              <li><b>Multiple Stations Select:</b> Allows you to modify certain properties of or delete multiple stations simultaneously</li>
-              <li><b>Force Local Positioning:</b> If the unit appears to be somewhere else on the map, i.e. the HMI shows a different position than the actual location, this is used to force the vehicle position to the location which you right clicked, then the unit will try to figure out the correct position again.</li>
-            </ul>
-            <p>
-              And, if you are right-clicking on a station or action area, there will be some other options in addition to, or instead of, the options mention above:
-            </p>
-            <ul>
-              <li><b>Modify Station: or Modify SVG Element:</b> Opens the properties menu for the selected object, which can also be accessed by double-clicking the station or object instead of going through the right-click action menu.</li>
-              <li><b>Drive to Station (only available when right-clicking on stations):</b> Automatically sends the unit to park in the designated station. Only used in Automatic Mode.</li>
-            </ul>
-            <p>
-              You can move stations with the mouse in 50 mm increments after they have been created by holding the SHIFT key, then click and drag the station to move. Similarly, you can also copy stations using the CTRL key. Copied stations inherit all the properties of the parent station, including the name (numbers will be appended at the end automatically to ensure a unique name), station area, allowed load carriers, preposition, etc.
-            </p>
-            <p class="paragraph-break">
-              Now let's take a look at the action area we created in Inkscape. Double-click on the action area,  or right-click and then choose "Modify SVG Element" with the wrench icon. When using the right-click menu you can also now see the action area you selected outlined with a dashed line:
-            </p>
-            <img src="images/basicpic1.jpg" id="basicpic1" class="fullsizepic">
-            <div class="twocolumn">
-              <div>
-                <p>
-                  From the properties dialog, the first things you will be able to change are the name of the area and the visibility conditions in the general tab. All of the possible conditions are covered in the Commissioning Manual in section 4.7.5, and with these conditional statements you can choose whether or not the action area will be displayed in the HMI. On the left-hand side are some additional tabs for Flags (Commissioning Manual section 4.5.4.1), Actions (section 4.7.6), and Direction - limiting driving to one-way or only certain directions.
-                </p>
-              </div>
-              <img src="images/basicpic2.jpg" id="basicpic2" class="twocolumnpic">
-            </div>
-            <div class="twocolumn">
-              <div>
-                <p>
-                  Next, notice that you have a tool-tip that appears when you hold the mouse over different areas:
-                </p>
-              </div>
-              <img src="images/basicpic3.jpg" id="basicpic3" class="twocolumnpic-bigger">
-            </div>
-            <p class="paragraph-break">
-              You can use this in conjunction with some additional visualization settings to understand how the path planning and driving dynamics work. In the visualization toggles tab, click on "Show route map in visualization". Here you can see the areas which AGILOX can use to plan routes using a cost-based system. Driving is prohibited in red areas (except when entering a station), and in orange areas driving is allowed, but not rotation - you can also see all of this information in the tool-tips that appear for each area. This will be an important tool in the next section, because stations generally must have their pre-position somewhere in the white space in this view. It can also be useful in the event that AGILOX refuses to drive through a narrow aisle, even though it looks like there should be enough space: if there is not a white-space path to the target, it won't be possible to get there in Automatic mode, so you will have to go back to Inkscape and make corrections to the map.
-            </p>
-            <img src="images/basicpic4.jpg" id="basicpic4" class="fullsizepic">
-            <p>
-              Another useful feature is the Heatmap section, the very last button on the HMI in the bottom left:
-            </p>
-            <img src="images/basicpic5.jpg" id="basicpic5" class="fullsizepic">
-            <p>
-              Here you have the option to select various heatmaps, including WiFi and 4G reception, position, speed, map quality, etc. If you start having issues later on in the setup process, these can help you understand why.
-            </p>
-            <p class="paragraph-break">
-              And finally, be sure to create regular backups of the software state. Now would be a good time to make the first one, and in the future, make a backup before you start making any changes to the system. Go to the Misc. tools and settings tab and click on "System settings":
-            </p>
-            <div class="squarepicsdiv">
-              <img src="images/basicpic6.jpg" id="basicpic6" class="rectanglepic">
-              <img src="images/basicpic7.jpg" id="basicpic7" class="rectanglepic">
-            </div>
-            <p>
-              When you click on the Backup / Restore button, you will be presented with the popup window above on the right. The Data option essentially saves everything about the system that you can change: the map, workflow information, wifi configuration, and any other custom attributes. Software is everything internal to the AGILOX platform: the installed software version, motion controls, IPC state, etc. Keep regular backups of both, and if you ever need to restore one of these files, the upload button is also here.
-            </p>
-            <a href="stations_workflows.html" class="main-link">Proceed to Stations and Workflows</a>
-          </section>
-      </main>
+  <main id="main-doc">
+    <section class="main-section" id="creating-the-map">
+      <header>
+        <h1>
+          Creating the Map
+        </h1>
+      </header>
+      <p>
+        Items required for this section:
+      </p>
+      <ul>
+        <li>WiFi-enabled laptop (smartphone may also be used for driving)</li>
+        <li>The free and open source drawing program Inkscape: <a href="https://inkscape.org/release/inkscape-1.0/"
+            class="main-link">click here to download</a></li>
+        <li>At least one active AGILOX vehicle that has been through the <a href="#initial-setup"
+            class="main-link">Initial Setup</a> process</li>
+      </ul>
+    </section>
+    <section class="main-section" id="auto-teach-function">
+      <header>
+        <h1>
+          Auto-Teach Function
+        </h1>
+      </header>
+      <p>
+        Before we begin to create the map, use Manual Mode to drive the unit into the intended operating area. It should
+        be parked initially in an area with a clear view of fixed reference points, such as a wall and other structural
+        features of the building which are unobstructed by crates or other materials, and ideally beginning about 20-30
+        feet away from and facing the center of one of the walls. Below is an example of the driving procedure for the
+        teaching function. It's best to drive in a roughly star-like or saw-tooth pattern as shown, rather than driving
+        in circles along the walls:
+      </p>
+      <img src="images/teachpic1.jpg" id="teachpic1" class="fullsizepic">
+      <p>
+        The area shown here is relatively small, and in fact a room this size may be adequately mapped with a single
+        scan, which may not require any driving at all. Note the pattern shown in this example is for illustration
+        purposes and not necessarily to scale.
+      </p>
+      <div class="twocolumn">
+        <div>
+          <p>
+            One last thing before you begin: in order to see what you're doing, you will need to enable some visibility
+            options in the HMI. Go the second button up from the bottom on the left hand side (Visualization Toggles)
+            and select "Show scan data in visualization" and "Show map in visualization" (the two highlighted in green
+            here).
+          </p>
+          <p>
+            The scan data option will show you dark and light blue lines, which represent the vision of the floor-level
+            safety scanners, as well as green lines, which show data from the navigation scanner on top. The show map
+            option will show black lines which represent the reference points that have been taught as part of the map.
+            There will not be any black lines just yet, since we have to create them!
+          </p>
+        </div>
+        <img src="images/teachpic2.jpg" id="teachpic2" class="twocolumnpic">
+      </div>
+      <p class="paragraph-break">
+        Now as in the last section, go to the Manual Drive page, and click on the button next to #3 to add a new contour
+        from the navigation scanner.
+      </p>
+      <img src="images/teachpic3.jpg" id="teachpic3" class="fullsizepic">
+      <div class="twocolumn">
+        <div>
+          <p>
+            In the window that pops up, first select "Rectangular Snap" and then click Enable AutoTeach.
+          </p>
+        </div>
+        <img src="images/teachpic4.jpg" id="teachpic4" class="twocolumnpic">
+      </div>
+      <p class="paragraph-break">
+        Now the unit will begin scanning the environment. There are audio-visual cues to let you know that scanning is
+        in progress and when it is done. Begin driving the unit in the mapping pattern shown above. When the navigation
+        match drops below a certain level, it will automatically stop and perform another scan. It's also a good idea to
+        keep an eye on the map as it is being built, so that you can ensure the dimensions of the defined map area can
+        accommodate the scan data - it is helpful here to have your laptop on the map view and use your phone for manual
+        driving. Go to the misc. tools and settings tab in the HMI and click the map settings button, so that a window
+        that looks like this comes up:
+      </p>
+      <img src="images/teachpic5.jpg" id="teachpic5" class="fullsizepic">
+      <p>
+        You will have to experiment with the dimensions and offsets to fit the map area into the window the way you
+        want. Note that all of the information that AGILOX captures about the environment is always stored in the map,
+        even if you can't see it. If you start driving and auto-teaching outside of the defined map area, or if you
+        shrink or shift the map in such a way that a previously visible portion disappears, the information will not be
+        lost. You can simply adjust the map until it is visible again - however, anything outside of the defined map
+        area cannot be used for navigation purposes, so the auto-teach process will be faster and more accurate if you
+        keep adjusting the map to contain everything within the visible area.
+      </p>
+      <p class="paragraph-break">
+        When finished mapping: from your computer, go back to the main menu by clicking the AGILOX logo in the top left
+        if you are not already there. For the next step, we need to download the map file that we have created, by
+        clicking the download button on the right hand side. But first, a little cleanup may be necessary.
+      </p>
+      <p>
+        When the "show map" visualization is enabled, you can also see all of the scan points here on the right hand
+        side. You can toggle the visibility of or delete specific map teaching increments here, and by hovering your
+        mouse over the numbers you will see which segments are included in that iteration highlighted in red.
+      </p>
+      <p>
+        Finally, the last button under the visualization toggles tab, "Erase map areas," will allow you delete specific
+        portions of the map. This is useful for removing small sections of erroneous information from the map, such as
+        scan points picked up by people's heads, crates, forklifts, or other temporary obstacles that you don't want to
+        be a part of the permanent map data.
+      </p>
+      <p>
+        When cleanup is finished and the map is properly sized and rotated, download the map file.
+      </p>
+      <img src="images/teachpic6.jpg" id="teachpic6" class="fullsizepic">
+    </section>
+    <section class="main-section" id="inkscape-configuration">
+      <header>
+        <h1>
+          Inkscape Configuration
+        </h1>
+      </header>
+      <p>
+        <a href="https://inkscape.org/release" class="main-link">Download the latest version of Inkscape here</a>
+      </p>
+      <p>
+        To facilitate the processing of AGILOX maps, some menu windows (1) and the color palette from the documentation
+        (2) are required.
+      </p>
+      <div class="twocolumn">
+        <div>
+          <h2>
+            Settings Menu
+          </h2>
+          <p>
+            The settings of the menus and windows are saved in the file <code>preferences.xml</code> (file can be
+            downloaded below). This file must be copied into the directory for the local Inkscape settings. This
+            directory is usually located under <code>C:\Users\<User>\AppData \Roaming\inkscape</code>
+          </p>
+          <h2>
+            Color Palette
+          </h2>
+          <p>
+            The color palette for the AGILOX standard map colors is saved in the file agilox.gpl (file can be downloaded
+            below). This file is to be copied into the directory for the local customer-specific color palettes from
+            Inkscape. This directory is usually located at
+            <code>C:\Users\<User>\AppData \Roaming\inkscape\palettes</code>
+          </p>
+          <p>
+            <b>After both files have been copied, please restart Inkscape.</b>
+          </p>
+          <p>
+            <a href="docs/preferences.xml" download class="main-link">Preferences</a><br>
+            <a href="docs/agilox.gpl" download class="main-link">Color Palette</a>
+          </p>
+        </div>
+        <img src="images/inkpic1.jpg" id="inkpic1" class="twocolumnpic-bigger">
+      </div>
+      <div class="twocolumn">
+        <div>
+          <h2>
+            Note
+          </h2>
+          <p>
+            If the AGILOX color palette is not automatically displayed after the restart, then it must be selected
+            manually.
+          </p>
+          <p>
+            By clicking on the arrow on the right edge of the color palette (1), a menu for selecting the color palette
+            <b>AGILOX</b> (2) appears.
+          </p>
+        </div>
+        <img src="images/inkpic2.jpg" id="inkpic2" class="twocolumnpic-bigger">
+      </div>
+    </section>
+    <section class="main-section" id="drawing-with-inkscape">
+      <header>
+        <h1>
+          Drawing with Inkscape
+        </h1>
+      </header>
+      <p>
+        Once Inkscape is properly configured, use it to open your map.svg file.
+      </p>
+      <h2>
+        Basic Information and Controls
+      </h2>
+      <ul>
+        <li>Navigation is accomplished with the mouse wheel and middle mouse button. Scrolling the mouse wheel moves the
+          image up and down, holding down the SHIFT key and scrolling the mouse wheel moves left and right, and holding
+          down the CTRL key and scrolling the mouse wheel zooms in and out. You can also hold down the wheel button
+          (middle click) and move the mouse to pan freely, tap the middle click button to zoom in, and tap the middle
+          click button while holding SHIFT to zoom out. If you are lacking a good middle mouse button, hold down CTRL
+          and use the arrow keys to pan, and use the +/- buttons to zoom in and out.</li>
+        <li>When you are sufficiently zoomed in, you can see major and minor grid lines in the background. The minor
+          grid lines represent a real-world distance of 100 mm, and each major grid line is made up of a 5x5 grid of 100
+          mm square blocks for a total of 0.5 m. When you zoom out, at a certain point the minor grid disappears and you
+          can only see the half-meter blocks.</li>
+        <li>There are several layers in the map file (as seen in the bottom right corner) - station, contour, blocked,
+          and general. The only layers you need to work with are blocked and general. <b>Don't try to edit the station
+            or contour layers</b>, as these are automatically generated in and handled by the HMI and are only shown in
+          the map file for reference.</li>
+        <li>It is very important to make sure that you are working in the correct layer at all times. The blocked layer
+          is used to draw permanent obstacles in the map, such as walls, shelves, holes in the floor, or generally any
+          area AGILOX should not attempt to drive through. The general layer is used to create everything else - action
+          areas for I/O, one-way lanes, crossing or reduced speed zones, tracks, and many other types of programmable
+          actions.</li>
+        <li>The color palette along the bottom is used to give the map a standardized appearance, however, the color has
+          no effect on functionality. You may use any color you wish for any type of area, but keeping the appearance
+          consistent makes it quick and easy for AGILOX technicians to understand your process and make changes if
+          necessary. The most commonly used colors are on the left, and if you hover your mouse over a color swatch you
+          will see the name of the type of area it is used for.</li>
+      </ul>
+      <img src="images/drawpic1.jpg" id="drawpic1" class="fullsizepic">
+      <p>
+        Notice that, similar to the picture below, there is a square/rectangle around the map scan data. This is the
+        area that was defined by the map dimensions you entered in the HMI previously. To start, we are going to create
+        a blocked rectangle over this entire defined area. Then we add or cut away parts of this to define the room and
+        the "allowed" areas. The general procedure for creating objects/areas in the map shown below is to (1) ensure
+        the correct layer is selected (blocked in this case), (2) select the rectangle tool at the top left, then (3)
+        choose the color - we will be starting with "blocked" (#e6e6e6).
+      </p>
+      <img src="images/drawpic2.jpg" id="drawpic2" class="fullsizepic">
+      <p>
+        Start by covering the defined map area with a blocked rectangle, like this:
+      </p>
+      <img src="images/drawpic3.jpg" id="drawpic3" class="fullsizepic">
+      <div class="twocolumn">
+        <div>
+          <p>
+            If you need to resize the shape, click on the select tool (mouse pointer) just above the rectangle tool, or
+            press S. <b>Press ESC when you are done to clear the selection</b>. Next we will define the room, i.e. the
+            walls and other permanent features of the building, by covering ALL of the walls with another blocked
+            rectangle using the room color.
+          </p>
+        </div>
+        <img src="images/drawpic4.jpg" id="drawpic4" class="twocolumnpic">
+      </div>
+      <div class="twocolumn">
+        <div>
+          <p>
+            Now we can begin cutting out the sections that don't belong to the room or blocked areas. Draw another
+            rectangle (we will call this the "<b>top</b>" object) over an area that you want to delete , then choose the
+            select tool or press S, so that you see black arrows around the object like this...
+          </p>
+        </div>
+        <img src="images/drawpic5.jpg" id="drawpic5" class="twocolumnpic">
+      </div>
+      <div class="twocolumn">
+        <div>
+          <p>
+            ...Then, hold down SHIFT and left click on the area you want to cut from, in this case the bigger dark grey
+            "room" rectangle (we will call this the "<b>bottom</b>" object).
+          </p>
+        </div>
+        <img src="images/drawpic6.jpg" id="drawpic6" class="twocolumnpic">
+      </div>
+      <div class="twocolumn">
+        <div>
+          <p>
+            Now hold CTRL and press the "-" (minus) key. This will subtract the top area from the bottom. This is more
+            or less all you need to know to work with Inkscape for the purposes of this tutorial: make a big object for
+            the bottom which covers everything you want to cover, make another object that covers the area to be deleted
+            on top, select the top object, SHIFT click on the bottom object, press CTRL - to delete. Now you will see
+            something like this:
+          </p>
+        </div>
+        <img src="images/drawpic7.jpg" id="drawpic7" class="twocolumnpic">
+      </div>
+      <p class="paragraph-break">
+        It's also possible to do the opposite of this, by creating two objects and combining them into one. Use the same
+        shift-click procedure as before to select both objects, then hold both the CTRL and SHIFT keys and press "+" to
+        combine. Here is another example:
+      </p>
+      <div class="squarepicsdiv">
+        <img src="images/drawpic8.jpg" id="drawpic8" class="threepicsmall">
+        <img src="images/drawpic9.jpg" id="drawpic9" class="threepicsmall">
+        <img src="images/drawpic10.jpg" id="drawpic10" class="threepicsmall">
+      </div>
+      <p>
+        Keep going with these techniques to cover only walls, columns, and other permanent features of the building in
+        the dark grey "room" color. Then, use the same techniques to cut away from the light grey "blocked" area to
+        reveal the white background, which is considered free driving area. Some spaces which might remain covered in
+        the light grey area include shelving/racking, work benches, grated floors, pedestrian walkways, or anywhere else
+        driving should not be allowed. From inside the driving area, cover the walls only as much a necessary, then
+        leave an extra 2-3 squares on the outside to ensure visibility, like this:
+      </p>
+      <img src="images/drawpic11.jpg" id="drawpic11" class="fullsizepic">
+      <div class="twocolumn">
+        <div>
+          <p>
+            The example map finished: Walls are dark grey, driving prohibited areas are light grey, and free driving
+            area is the blank white background. Before you go to the next section, add at least one action (yellow) area
+            in the general layer like the one shown here as well - you can always remove it later. If you create an
+            action area in the blocked layer by mistake (or vice versa), you can change the layer of an object by
+            selecting it, right clicking on it, then choose "Move to Layer...", select general, and press move.
+          </p>
+        </div>
+        <img src="images/drawpic12.jpg" id="drawpic12" class="twocolumnpic">
+      </div>
+      <p class="paragraph-break">
+        When finished editing the map, be sure to save the file before closing Inkscape. Now go to your Downloads folder
+        (or wherever you saved the map file), and drag and drop the map file from Windows explorer into the HMI window
+        in your browser. This will automatically update the map for all units in the Union if more than one unit is
+        connected.
+      </p>
+      <img src="images/drawpic13.jpg" id="drawpic13" class="fullsizepic">
+      <img src="images/drawpic14.jpg" id="drawpic14" class="fullsizepic">
+    </section>
+    <section class="main-section" id="basic-hmi-features">
+      <header>
+        <h1>
+          Basic HMI Features
+        </h1>
+      </header>
+      <p>
+        With the map uploaded, there are some additional features to be aware of before we get into creating stations
+        and workflows. When interacting with the map in the HMI, you can right click anywhere (or tap and hold on a
+        touch-screen device) to bring up the Action menu, which will always give you a few actions to perform:
+      </p>
+      <ul>
+        <li><b>Drive to Target:</b> Only used in automatic mode, sends the unit to the desired position automatically.
+        </li>
+        <li><b>New Station:</b> Used to create new stations, as well as waypoints and IO links. If you right click in
+          between the forks of an AGILOX vehicle before choosing this option, the new station will be created in the
+          same position and orientation as the vehicle.</li>
+        <li><b>New StationArea:</b> Creates a new group name to be used by stations which are all to be considered as a
+          single origin/destination point. For example, when you want to bring one of many identical pallets to a
+          general area of the map, but you don't care which exact station it ends up in.</li>
+        <li><b>Multiple Stations Select:</b> Allows you to modify certain properties of or delete multiple stations
+          simultaneously</li>
+        <li><b>Force Local Positioning:</b> If the unit appears to be somewhere else on the map, i.e. the HMI shows a
+          different position than the actual location, this is used to force the vehicle position to the location which
+          you right clicked, then the unit will try to figure out the correct position again.</li>
+      </ul>
+      <p>
+        And, if you are right-clicking on a station or action area, there will be some other options in addition to, or
+        instead of, the options mention above:
+      </p>
+      <ul>
+        <li><b>Modify Station: or Modify SVG Element:</b> Opens the properties menu for the selected object, which can
+          also be accessed by double-clicking the station or object instead of going through the right-click action
+          menu.</li>
+        <li><b>Drive to Station (only available when right-clicking on stations):</b> Automatically sends the unit to
+          park in the designated station. Only used in Automatic Mode.</li>
+      </ul>
+      <p>
+        You can move stations with the mouse in 50 mm increments after they have been created by holding the SHIFT key,
+        then click and drag the station to move. Similarly, you can also copy stations using the CTRL key. Copied
+        stations inherit all the properties of the parent station, including the name (numbers will be appended at the
+        end automatically to ensure a unique name), station area, allowed load carriers, preposition, etc.
+      </p>
+      <p class="paragraph-break">
+        Now let's take a look at the action area we created in Inkscape. Double-click on the action area, or right-click
+        and then choose "Modify SVG Element" with the wrench icon. When using the right-click menu you can also now see
+        the action area you selected outlined with a dashed line:
+      </p>
+      <img src="images/basicpic1.jpg" id="basicpic1" class="fullsizepic">
+      <div class="twocolumn">
+        <div>
+          <p>
+            From the properties dialog, the first things you will be able to change are the name of the area and the
+            visibility conditions in the general tab. All of the possible conditions are covered in the Commissioning
+            Manual in section 4.7.5, and with these conditional statements you can choose whether or not the action area
+            will be displayed in the HMI. On the left-hand side are some additional tabs for Flags (Commissioning Manual
+            section 4.5.4.1), Actions (section 4.7.6), and Direction - limiting driving to one-way or only certain
+            directions.
+          </p>
+        </div>
+        <img src="images/basicpic2.jpg" id="basicpic2" class="twocolumnpic">
+      </div>
+      <div class="twocolumn">
+        <div>
+          <p>
+            Next, notice that you have a tool-tip that appears when you hold the mouse over different areas:
+          </p>
+        </div>
+        <img src="images/basicpic3.jpg" id="basicpic3" class="twocolumnpic-bigger">
+      </div>
+      <p class="paragraph-break">
+        You can use this in conjunction with some additional visualization settings to understand how the path planning
+        and driving dynamics work. In the visualization toggles tab, click on "Show route map in visualization". Here
+        you can see the areas which AGILOX can use to plan routes using a cost-based system. Driving is prohibited in
+        red areas (except when entering a station), and in orange areas driving is allowed, but not rotation - you can
+        also see all of this information in the tool-tips that appear for each area. This will be an important tool in
+        the next section, because stations generally must have their pre-position somewhere in the white space in this
+        view. It can also be useful in the event that AGILOX refuses to drive through a narrow aisle, even though it
+        looks like there should be enough space: if there is not a white-space path to the target, it won't be possible
+        to get there in Automatic mode, so you will have to go back to Inkscape and make corrections to the map.
+      </p>
+      <img src="images/basicpic4.jpg" id="basicpic4" class="fullsizepic">
+      <p>
+        Another useful feature is the Heatmap section, the very last button on the HMI in the bottom left:
+      </p>
+      <img src="images/basicpic5.jpg" id="basicpic5" class="fullsizepic">
+      <p>
+        Here you have the option to select various heatmaps, including WiFi and 4G reception, position, speed, map
+        quality, etc. If you start having issues later on in the setup process, these can help you understand why.
+      </p>
+      <p class="paragraph-break">
+        And finally, be sure to create regular backups of the software state. Now would be a good time to make the first
+        one, and in the future, make a backup before you start making any changes to the system. Go to the Misc. tools
+        and settings tab and click on "System settings":
+      </p>
+      <div class="squarepicsdiv">
+        <img src="images/basicpic6.jpg" id="basicpic6" class="rectanglepic">
+        <img src="images/basicpic7.jpg" id="basicpic7" class="rectanglepic">
+      </div>
+      <p>
+        When you click on the Backup / Restore button, you will be presented with the popup window above on the right.
+        The Data option essentially saves everything about the system that you can change: the map, workflow
+        information, wifi configuration, and any other custom attributes. Software is everything internal to the AGILOX
+        platform: the installed software version, motion controls, IPC state, etc. Keep regular backups of both, and if
+        you ever need to restore one of these files, the upload button is also here.
+      </p>
+      <a href="stations_workflows.html" class="main-link">Proceed to Stations and Workflows</a>
+    </section>
+  </main>
 </body>
